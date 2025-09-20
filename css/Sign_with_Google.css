@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: #EEF6FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+  .login-container {
+    background-color: #fff;
+    padding: 40px;
+    width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+   .login-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .login-header img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .login-header span {
+    font-size: 20px;
+    color: #B1B2B7;
+  }
+   .login-title {
+    font-size: 48px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .login-subtitle {
+    font-size: 16px;
+    color: #5f6368;
+    margin-bottom: 20px;
+  }
+  .account {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    
+  }
+  .account img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .account-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .account-info strong {
+    font-size: 14px;
+  }
+
+  .account-info span {
+    font-size: 12px;
+    color: #5f6368;
+  }
