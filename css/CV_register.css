@@ -79,35 +79,37 @@ section {
 
 
 
-.section_right_1 a {
+.border-wrapper {
+    width: 87%;
+    max-width: 450px;
+    border-radius: 35px;
+    padding: 2px; /* border qalınlığı */
+    background: linear-gradient(to right, #FF0000, #FFB618, #3BA637, #73AFF3);
+    display: inline-block;
+}
+
+.inner-box {
+    border-radius: 31px; /* wrapper radius - padding */
+    background: white;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+.inner-box a {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: #000;
-    padding: 10px;
-    border: 2px solid transparent;
-    border-image: linear-gradient(to right,
-            #FF0000 0%,
-            #FFB618 30%,
-            #3BA637 64%,
-            #73AFF3 100%);
-    border-image-slice: 1;
-    border-radius: 35px;
-    gap: 10px;
+    margin-left: 20%;
 }
 
-.section_right_1 img {
-    position: absolute;
+.inner-box img {   
+     position: absolute;
     width: 91px;
     left: -20px;
-
-}
-
-.section_right_1 strong {
-    font-size: 20px;
-    font-weight: 800;
-    margin-left: 10%;
-
+    top: -14px;
 
 }
 
