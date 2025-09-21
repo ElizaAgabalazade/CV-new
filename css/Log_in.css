@@ -22,7 +22,7 @@ section {
     flex-wrap: wrap;
     flex-direction: column;
     width: 40%;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 10%;
     position: relative;
     top: 1px;
@@ -85,10 +85,14 @@ section {
 }
 
 .section_left_3 {
-    margin-top: 60%;
+    margin-top: 50%;
     font-size: 15px;
-    color: #6E666F;
+    color: #73AFF3;
+    text-decoration: underline;
+    text-decoration-color:  #73AFF3;
     text-align: center;
+    cursor: pointer;
+    
 }
 
 .section_left_3 a {
@@ -145,13 +149,6 @@ section {
     border-radius: 35px;
 }
 
-
-
-
-
-
-
-
 .section_right {
     width: 50%;
     height: 100%;
@@ -169,10 +166,9 @@ section {
     font-size: 64px;
     color: #fff;
     font-weight: 800;
-    margin-top: 380px;
+    margin-top: 30%;
     margin-left: 162px;
 }
-
 .section_right p {
     font-size: 32px;
     color: #fff;
@@ -180,6 +176,7 @@ section {
     margin-left: 90px;
 
 }
+
 
 .btn {
     font-size: 20px;
@@ -194,5 +191,5 @@ section {
             #73AFF3 0%,
             #A58AE8 31%,
             #BE78E3 65%,
-            #D766DD 100%);
+            #D766
 }
