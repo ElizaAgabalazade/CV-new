@@ -1,78 +1,203 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 
-body{
-    background-color: #EEF6FF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+body {
+  background-color: #EEF6FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-  .login-container {
-    background-color: #fff;
-    padding: 40px;
-    width: 400px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-   .login-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-  }
+.login-header {
+  background-color: #fff;
+  padding: 20px;
+  width: 100vw;
+  max-width: 1196px;
+  height: 563px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
 
-  .login-header img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-  }
 
-  .login-header span {
-    font-size: 20px;
-    color: #B1B2B7;
-  }
-   .login-title {
-    font-size: 48px;
-    font-weight: 500;
-    margin-bottom: 10px;
-  }
+.login-header img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: -10px;
+}
 
-  .login-subtitle {
-    font-size: 16px;
-    color: #5f6368;
-    margin-bottom: 20px;
-  }
-  .account {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #dadce0;
-    border-radius: 4px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    
-  }
-  .account img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    margin-right: 10px;
-  }
-  .account-info {
-    display: flex;
-    flex-direction: column;
-  }
+.login-header span {
+  font-size: 20px;
+  color: #B1B2B7;
+  margin-bottom: 5px;
+}
 
-  .account-info strong {
-    font-size: 14px;
-  }
+.before_section{
+  margin-top: 17px;
+  border: none;
+  height: 1px;
+  background-color: #000;
 
-  .account-info span {
-    font-size: 12px;
-    color: #5f6368;
-  }
+}
+
+.section_1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+
+
+}
+
+.box_1 {
+  /* background-color: red; */
+  width: 50%;
+  justify-content: center;
+  justify-content: center;
+
+}
+
+.text_1 {
+  font-size: 41px;
+  margin-top: 40px;
+  text-align: center;
+
+}
+
+.text_2 {
+  margin-top: 40px;
+  color: #6E666F;
+  font-size: 16px;
+  text-align: center;
+}
+
+.text_2 a {
+  color: #0088FF;
+}
+
+.box_2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 50%;
+  /* background-color: blue; */
+}
+
+.accaunts {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 13%;
+}
+
+.accaunt_1,
+.accaunt_2 {
+  display: flex;
+  /* background-color: red; */
+}
+
+.accaunt_1_left
+img {
+  /* background-color: pink; */
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+
+}
+
+.accaunt_1_right,
+.accaunt_2_right,
+h3 {
+  font-size: 20px;
+}
+
+.accaunt_1_right
+ p {
+  font-size: 16px;
+  color: #6A6A6F;
+}
+
+
+.accaunt_1_line{
+   border: none;
+  height: 1px;
+  margin-top: 10px;
+
+  background-color: #B1B2B7;
+}
+
+
+.accaunt_2 {
+  display: flex;
+  margin-top: 40px;
+}
+
+.accaunt_2_left img {
+  margin-top: 5px;
+  width: 40px;
+  height: 40px;
+}
+.accaunt_2_right p{
+font-size: 16px;
+  color: #6A6A6F;
+}
+.accaunt_3 {
+  display: flex;
+  margin-top: 40px;
+}
+.accaunt_3_left img {
+  margin-top: 5px;
+  width: 48px;
+  height: 48px;
+}
+.accaunt_3_right h3{
+font-size: 16px;
+margin-top: 20px;
+}
+.accaunt_2_3_line{
+ border: none;
+  height: 1px;
+  margin-top: 10px;
+  background-color: #868693;
+}
+.terms_privacy{
+  margin-top: 10%;
+}
+.terms_privacy span{
+  color: #6E666F;
+  font-size: 16px;
+}
+.terms_privacy a{
+  color: #0088FF;
+  text-decoration: none;
+}
+footer{
+  display: flex;
+ 
+}
+footer strong {
+  width: 20%;
+   margin: 10px 20px;
+  font-size: 8px;
+  color: #6E666F;
+}
+footer ul{
+  display: flex;
+  width: 70%;
+  justify-content: flex-end;
+  list-style-type: none;
+}
+
+footer ul li a{
+  text-decoration: none;
+  color: #6E666F;
+margin-left: 10px;
+
+}
+ 
