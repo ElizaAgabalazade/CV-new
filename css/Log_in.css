@@ -142,6 +142,7 @@ section {
 
 .next {
     margin-left: 30%;
+    margin-right: 20%;
     font-size: 20px;
     color: #fff;
     background-color: #49D987;
@@ -185,11 +186,13 @@ section {
     padding: 10px;
     width: 179px;
     height: 44px;
+    color: #fff;
+    border: 1px solid #ffff;
     border-radius: 35px;
     cursor: pointer;
     background: linear-gradient(to right,
             #73AFF3 0%,
             #A58AE8 31%,
             #BE78E3 65%,
-            #D766
+            #D766 100%)
 }
