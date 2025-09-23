@@ -18,7 +18,7 @@ section {
 }
 
 .section_left {
-    width: 50%;
+    width: 60%;
     height: 100%;
     background: linear-gradient(to bottom,
             #73AFF3 0%,
@@ -53,6 +53,7 @@ section {
     padding: 10px;
     width: 179px;
     height: 44px;
+    border: 1px solid #fff;
     border-radius: 35px;
     cursor: pointer;
     background: linear-gradient(to right,
@@ -67,7 +68,7 @@ section {
     flex-wrap: wrap;
     flex-direction: column;
     width: 40%;
-    margin-left: 10%;
+    margin-left: 5%;
     position: relative;
     top: 1px;
 }
@@ -142,6 +143,10 @@ section {
 .section_right_3 a {
     display: flex;
     flex-direction: column;
+    color: #6E666F;
+    text-decoration: underline;
+      text-decoration-color: #D9D9D9;
+       text-decoration-thickness: 2px;
    
   
 }
@@ -167,27 +172,54 @@ section {
 }
 .actions{
     display: flex;
-    justify-content: space-around;
+    gap: 10%;
     align-items: center;
     width: 100%;
     margin-top: 30px;
-
-
-
 }
-.back{
-    font-size: 20px;
+
+.back, .next{
+    width: 50%;
+    margin-right: 30%;
+    margin-top: 20%;
+}
+.back  button{
+    width: 100px;
     background-color: #73AFF3;
-    color: #fff;
-    padding:2% 10%;
+    margin-left: 5%;
+    margin-top: 15%;
+    height: 40px;
     border-radius: 35px;
+    cursor: pointer;
+    border: none;
+    outline: none;     
 }
-.next{
-    margin-left: 40%;
+.back button a{
+   font-size: 20px;
+   text-decoration: none;
+   color: #fff;
+}
+
+
+.next button{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+     border: none;
+    outline: none;
+    margin-top: 15%;
+    margin-left: 30%;
+    margin-right: 20%;
     font-size: 20px;
     color: #fff;
     background-color: #49D987;
-    padding:2% 10%;
+    padding: 2% 10%;
     border-radius: 35px;
+
 }
 
+.next button a{
+   font-size: 20px;
+   text-decoration: none;
+   color: #fff;
+}

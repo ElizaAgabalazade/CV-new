@@ -131,16 +131,34 @@ section {
     margin-top: 30px;
     margin-right: 10%;
 }
-
-.back {
-    font-size: 20px;
+.back, .next{
+    width: 50%;
+}
+.back  button{
+    width: 100px;
     background-color: #73AFF3;
-    color: #fff;
-    padding: 2% 10%;
+    margin-left: 5%;
+    margin-top: 15%;
+    height: 40px;
     border-radius: 35px;
+    cursor: pointer;
+    border: none;
+    outline: none;     
+}
+.back button a{
+   font-size: 20px;
+   text-decoration: none;
+   color: #fff;
 }
 
-.next {
+
+.next button{
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+     border: none;
+    outline: none;
+    margin-top: 15%;
     margin-left: 30%;
     margin-right: 20%;
     font-size: 20px;
@@ -148,10 +166,24 @@ section {
     background-color: #49D987;
     padding: 2% 10%;
     border-radius: 35px;
+
 }
 
+.next button a{
+   font-size: 20px;
+   text-decoration: none;
+   color: #fff;
+}
+
+
+
+
+
+
+
+
 .section_right {
-    width: 50%;
+    width: 60%;
     height: 100%;
     background: linear-gradient(to bottom,
             #73AFF3 0%,

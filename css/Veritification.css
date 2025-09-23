@@ -21,6 +21,7 @@ section {
 .section_left {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     width: 50%;
     height: 100%;
     background: linear-gradient(to bottom,
@@ -128,6 +129,8 @@ section {
     font-size: 20px;
     border: 1px solid #fff;
     color: #fff;
+    font-size: 20px;
+    font-weight: 700;
     cursor: pointer;
     text-decoration: none;
     background: linear-gradient(to right,
@@ -135,10 +138,7 @@ section {
             #73AFF3);
 }
 
-.sign {
-    color: #fff;
-    font-size: 700;
-}
+
 
 .section_right_3 {
     display: flex;
@@ -146,54 +146,35 @@ section {
     margin-top: 4%;
 }
 
-.section_right_3 p {
+.section_right_3 a {
     text-align: center;
+    text-decoration: none;
     margin-top: 15%;
-}
-
-.btn_r {
-    font-size: 20px;
-    margin-top: 2%;
-    margin-left: 26%;
-    padding: 10px;
-    width: 234px;
-    height: 44px;
-    border-radius: 35px;
-    font-size: 20px;
-    cursor: pointer;
-    text-decoration: none;
-
-    border: 2px solid transparent;
-    /* border şəffaf */
-    background:
-        linear-gradient(#fff, #fff) padding-box,
-        /* iç rəng */
-        linear-gradient(to right, #0088FF, #D766DD) border-box;
-    /* border gradient */
-}
-
-.send {
-    text-decoration: none;
     color: #6E666F;
 }
 
-.back {
-    font-size: 20px;
+
+
+
+.back  button{
     width: 100px;
     background-color: #73AFF3;
-    color: #fff;
-    margin-left: 10px;
-    margin-top: 10px;
+    margin-left: 5%;
+    margin-top: 15%;
     height: 40px;
     border-radius: 35px;
-    position: relative;
     cursor: pointer;
+    border: none;
+    outline: none;
+  
+    
+
+    
+}
+.back button a{
+   font-size: 20px;
+   text-decoration: none;
+   color: #fff;
 }
 
-.back strong {
-    margin-left: 25%;
-    padding: 5px;
-    top: 3px;
-    position: absolute;
 
-}
