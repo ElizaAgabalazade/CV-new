@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -41,35 +42,41 @@ header {
 
 
 .nav {
-  width: 40%;
-  position: relative; /* pseudo-elementlər üçün lazımdır */
+    width: 40%;
+    position: relative;
+    /* pseudo-elementlər üçün lazımdır */
+    overflow-y: hidden;
 }
 
 .nav::before,
 .nav::after {
-  content: "";
-  position: absolute;
-  width: 200px;    /* şəkilin ölçüsünü uyğunlaşdır */
-  height: 200px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  z-index: -1;     /* menyunun arxasında qalsın */
+    content: "";
+    position: absolute;
+    width: 200px;
+    /* şəkilin ölçüsünü uyğunlaşdır */
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+    /* menyunun arxasında qalsın */
 }
 
 /* Sol tərəfdəki şəkil */
 .nav::before {
-  background-image: url("../img/background1.png"); /* öz şəkil yolunu yaz */
-  bottom: -50px;   /* menyunun altına sürüşdürmək üçün */
-  left: 0;
+    background-image: url("../img/background1.png");
+    /* öz şəkil yolunu yaz */
+    bottom: -50px;
+    /* menyunun altına sürüşdürmək üçün */
+    left: 0;
 }
 
 /* Sağ tərəfdəki şəkil */
 .nav::after {
-  background-image: url("../img/background2.png");
-  bottom: -50px;
-  right: 0;
-  width: 395px;
+    background-image: url("../img/background2.png");
+    bottom: -50px;
+    right: 0;
+    width: 395px;
 }
 
 
@@ -98,25 +105,308 @@ header {
     width: 30%;
     justify-content: center;
     align-items: center;
-    margin-left: 20px;
-margin-bottom: 30px;}
-.sign_log  a{
+    margin-left: ;
+}
+
+.sign_log a {
     font-size: 26px;
     font-weight: 700;
     text-decoration: none;
     color: #646E77;
 }
-.sign_log button{
+
+.sign_log button {
     border-radius: 25px;
     padding: 10px 40px;
     margin-left: 15px;
     border: none;
-    background-image: linear-gradient(to right, #73AFF3 ,#D766DD);
+    background-image: linear-gradient(to right, #73AFF3, #D766DD);
 
 
 }
-.sign_log button  a{
+
+.sign_log button a {
     color: #fff;
     text-shadow: 0px 0px 3px #fff;
 
 }
+
+section {
+    width: 100vw;
+    border-radius: 25px;
+    box-shadow: 0px 0x 4px #BAD7F9;
+}
+
+.section_overall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
+}
+
+.section1,
+.section2,
+.section3 {
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0 0 50px 3px #C3DCFA;
+    width: 25%;
+    height: 70%;
+    /* background: red; */
+}
+
+.section1 p {
+    color: #868693;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #DCDCDC;
+    border-radius: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+    width: 230px;
+}
+
+.section1 h2 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section1 span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: #868693;
+    text-align: center;
+}
+
+.section1 ul {
+    margin-left: 25px;
+    color: #868693;
+}
+
+.section1 ul li::marker {
+    color: #009951;
+    font-size: 16px;
+}
+
+.section2 p {
+    color: #868693;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #DCDCDC;
+    border-radius: 10px;
+    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+    width: 230px;
+}
+
+
+.section1 h3 {
+    font-size: 16px;
+    text-align: center;
+    margin: 30px 20px;
+}
+
+.section1 button {
+    border: none;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #0088FF, #D766DD);
+    font-size: 20px;
+    padding: 10px 70px;
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+
+.section1 button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    /* text-shadow: 0 0 2px #fff; */
+}
+
+.section_2 {
+    margin-bottom: 20px;
+}
+
+.section2 p {
+    color: #868693;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #DCDCDC;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    width: 230px;
+}
+
+.section2 h2 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.section2 span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: #868693;
+    text-align: center;
+}
+
+.section2 ul {
+    margin-left: 25px;
+    color: #868693;
+}
+
+.section2 ul li::marker {
+    color: #009951;
+    font-size: 16px;
+}
+
+.section2 h3 {
+    font-size: 16px;
+    text-align: center;
+    margin: 30px 20px;
+}
+
+
+.basic h1 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 10px;
+    width: 80px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #73AFF3, #0088FF);
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.basic_2 h1 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #73AFF3, #0088FF);
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+
+.section2 h3 {
+    font-size: 16px;
+    text-align: center;
+    margin: 30px 20px;
+}
+
+.section2 button {
+    border: none;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #0088FF, #D766DD);
+    font-size: 20px;
+    padding: 10px 70px;
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+
+.section2 button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    /* text-shadow: 0 0 2px #fff; */
+}
+
+
+.section3 {
+    background-color: #000;
+    width: 25%;
+
+}
+.section3 h1 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.section3 p {
+    color: #868693;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #444444;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 50px;
+    text-align: center;
+    width: 230px;
+}
+.basic_3 h1 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #73AFF3, #0088FF);
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.section3 h2{
+     font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+.section3 span{
+    display: flex;
+    justify-content: center;
+    font-size: 26px;
+    color: #fff;
+    text-align: center;
+}
+.section3 ul {
+    margin-top: 10px;
+    margin-left: 25px;
+    color: #fff;
+}
+.section3 ul li::marker {
+    color: #009951;
+    font-size: 16px;
+}
+.section3 h3{
+    font-size: 16px;
+    text-align: center;
+    margin: 30px 20px;
+    color: #fff;
+}
+.section3 button {
+    border: none;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #0088FF, #D766DD);
+    font-size: 20px;
+    padding: 10px 70px;
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+
+.section3 button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    /* text-shadow: 0 0 2px #fff; */
+}
+
