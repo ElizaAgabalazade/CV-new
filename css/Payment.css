@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #D9D9D9;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.section1 {
+    width: 30%;
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 20px;
+}
+
+.section1 h1 {
+    font-size: 20px;
+    color: #868693;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 15%;
+
+}
+
+.section1 button {
+    /* qalınlıq vacibdir */
+    border-radius: 15px;
+    display: inline-block;
+    width: 70%;
+    margin-top: 5%;
+    margin: 20px auto;
+    margin-bottom: 40px;
+    padding: 40px 40px;
+    border: 1px solid transparent;
+    /* mütləq lazımdır */
+    background:
+        linear-gradient(#fff, #fff) padding-box,
+        /* iç hissə */
+        linear-gradient(to right, #0088FF, #D766DD) border-box;
+    /* border */
+
+}
+
+.section1 button a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #868693;
+    text-align: center;
+    margin-top: 10%;
+    margin-bottom: 4%;
+
+
+}
+
+.section2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 15px;
+
+}
+
+.card-wrapper {
+    border-radius: 10px;
+    width: 300px;   
+    margin: 20px auto;
+    /* yuvarlaq künc */
+    padding: 2px;
+    /* border qalınlığı */
+    background: linear-gradient(to right, #0088FF, #D766DD);
+    display: inline-block;
+}
+
+.card-number {
+     text-align: center;
+        border: none;
+        outline: none;
+        border-radius: 8px;
+        /* wrapper-in iç radiusu */
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 26px;
+}
+
+
+.inputs-row {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto;
+}
+
+.inputs-row h1{
+    font-size: 20px;
+    background-color: #fff;
+}
+.inputs-row input {
+    width: 100%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+   
+}
+.inputs-row input::placeholder{
+     color: #000;
+     opacity: 1;
+}
+
+.month {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    border-radius: 10px;
+    /* yuvarlaq künc */
+    padding: 2px;
+    /* border qalınlığı */
+   border-image: linear-gradient(to right, #0088FF, #D766DD);
+    display: inline-block;
+}
+
+.cvv {
+    width: 40%;
+    border-radius: 10px;
+    /* yuvarlaq künc */
+    padding: 2px;
+    /* border qalınlığı */
+    background: linear-gradient(to right, #0088FF, #D766DD);
+    display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.pay-btn:hover {
+    opacity: 0.9;
+}
+
+.section3 {
+    width: clamp(200px, 70%, 300px);
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-bottom: 20px;
+    box-shadow: 10px 20px 120px 20px #3285e4;
+
+}
+
+.basic h1 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    padding: 10px;
+    width: 80px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #73AFF3, #0088FF);
+    margin-left: 30px;
+    margin-top: 10%;
+}
+
+.section3 p {
+    color: #868693;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #DCDCDC;
+    border-radius: 10px;
+    margin: 30px auto;
+    justify-content: center;
+    width: 230px;
+}
+
+.section3 h2 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section3 span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: #868693;
+    text-align: center;
+}
+
+.section3 ul {
+    margin-left: 25px;
+    color: #868693;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.section3 ul li::marker {
+    color: #009951;
+    font-size: 16px;
+}
+
+.section3 p {
+    color: #868693;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #DCDCDC;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10%;
+    justify-content: center;
+    text-align: center;
+    width: 230px;
+}
+
+
+.section3 h3 {
+    font-size: 16px;
+    text-align: center;
+    margin: 30px 20px;
+    margin: 20px 40px;
+}
+
+.section3 button {
+    border: none;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #0088FF, #D766DD);
+    font-size: 20px;
+    padding: 10px 70px;
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+
+.section3 button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    /* text-shadow: 0 0 2px #fff; */
+}
