@@ -16,6 +16,8 @@ section {
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    height: 50vh;
+    margin-bottom: 10px;
 }
 
 .section1 {
@@ -69,17 +71,23 @@ section {
 
 .section2 {
     width: 30%;
+    height: 65vh;
     display: flex;
     flex-direction: column;
     background-color: #fff;
     border-radius: 15px;
+    padding-top: 70px;
+    margin-top: 40px;
 
 }
 
 .card-wrapper {
     border-radius: 10px;
-    width: 300px;   
+    width: 300px;
+
+    justify-content: center;
     margin: 20px auto;
+    margin-left: 10%;
     /* yuvarlaq künc */
     padding: 2px;
     /* border qalınlığı */
@@ -88,15 +96,15 @@ section {
 }
 
 .card-number {
-     text-align: center;
-        border: none;
-        outline: none;
-        border-radius: 8px;
-        /* wrapper-in iç radiusu */
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
-        font-size: 26px;
+    display: block;
+    text-align: center;
+    border: none;
+    outline: none;
+    padding: 20px;
+    border-radius: 8px;
+    /* wrapper-in iç radiusu */
+    width: 100%;
+    font-size: 26px;
 }
 
 
@@ -106,51 +114,75 @@ section {
     margin: 20px auto;
 }
 
-.inputs-row h1{
+.month label,
+.cvv label {
     font-size: 20px;
-    background-color: #fff;
+    color: #D9D9D9;
+    display: block;
+    text-align: center;
+    margin-bottom: 2px;
 }
+
 .inputs-row input {
     width: 100%;
     padding: 10px 15px;
-    border: none;
+    border: 1px solid #73AFF3;
     border-radius: 10px;
     outline: none;
-   
-}
-.inputs-row input::placeholder{
-     color: #000;
-     opacity: 1;
+
 }
 
-.month {
+
+.month,
+.cvv {
     display: flex;
     flex-direction: column;
     width: 40%;
-    border-radius: 10px;
-    /* yuvarlaq künc */
-    padding: 2px;
-    /* border qalınlığı */
-   border-image: linear-gradient(to right, #0088FF, #D766DD);
-    display: inline-block;
+
 }
 
-.cvv {
-    width: 40%;
-    border-radius: 10px;
-    /* yuvarlaq künc */
-    padding: 2px;
-    /* border qalınlığı */
-    background: linear-gradient(to right, #0088FF, #D766DD);
-    display: inline-block;
+.pay-btn {
+    display: block;
+    text-align: center;
+    background: linear-gradient(to right, #5C17FC, #0088FF);
+    border: none;
+    border-radius: 35px;
+    color: #fff;
+    width: 60%;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 60px auto;
 }
 
+.succes {
+   display: none; 
+  position: fixed;      /* ekranın üzərinə çıxsın */
+  top: 90%;             /* dikey ortala */
+  left: 50%;            /* üfüqi ortala */
+  transform: translate(-50%, -50%); /* tam ortada */
+  background: #fff;    
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 30%;
+  margin-top: 20px auto; 
+  margin-left: 40px;
+  height: 30hv;
+  z-index: 1000;     
+}
+.succes h1{
+    prefix: 26px;
+}
+.succes span{
+    color: #D9D9D9;
+    font-size: 20px;
 
+}
 
-
-
-
-
+.succes.active {
+  display: block; 
+}
 
 
 
@@ -263,4 +295,98 @@ section {
     color: #fff;
     font-weight: 700;
     /* text-shadow: 0 0 2px #fff; */
+}
+
+
+
+
+.next button a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+}
+
+@media (max-width: 1024px) {
+    section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section1,
+    .section2,
+    .section3 {
+        width: 80%;
+        /* genişliyi ekran ölçüsünə uyğunlaşdırır */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .card-wrapper {
+        width: 90%;
+        /* card input daha elastik olsun */
+    }
+
+    .inputs-row {
+        flex-direction: column;
+        /* yan-yana input-lar alt-alta */
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .month,
+    .cvv {
+        width: 100%;
+        /* input bloklarını tam genişlikdə göstərir */
+        margin-bottom: 10px;
+    }
+
+    .section1 button,
+    .section3 button,
+    .pay-btn {
+        width: 90%;
+        /* button-lar ekran ölçüsünə uyğun */
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+
+    .section3 p,
+    .section3 span,
+    .section3 ul {
+        width: 90%;
+        margin: 10px auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section1 h1,
+    .section3 h2,
+    .section3 span,
+    .inputs-row h1 {
+        font-size: 1rem;
+        /* başlıqları kiçildir */
+    }
+
+    .card-number {
+        font-size: 1.5rem;
+        /* input text daha kiçik */
+        padding: 8px;
+    }
+
+    .inputs-row input {
+        font-size: 0.9rem;
+        padding: 8px 10px;
+    }
+
+    .pay-btn {
+        font-size: 0.9rem;
+        padding: 10px 0;
+    }
+
+    .section1 button,
+    .section3 button {
+        font-size: 0.9rem;
+        padding: 10px 0;
+    }
 }

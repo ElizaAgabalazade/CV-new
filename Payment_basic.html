@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/Payment_basic.css">
+    <script src="./js/Payment_Basic.js" defer></script>
+    <script src="./js/Payment.js"></script>
+    <title>Payment</title>
+</head>
+
+<body>
+
+    <section>
+        <div class="section1">
+            <h1>Payment Methods</h1>
+            <button>
+                <a href="Credit Card">Credit Card</a>
+                <img src="./img/Arrow 5.png" alt="">
+            </button>
+            <button>
+                <a href="Credit Card">Credit Card</a>
+                <img src="./img/Arrow 5.png" alt="">
+            </button>
+        </div>
+        <div class="section2">
+            <form id="paymentForm">
+                <div class="card-wrapper">
+                    <input type="text" class="card-number" name="cardNumber" placeholder="**** **** **** 2620"
+                        maxlength="19" required>
+                </div>
+                <div class="inputs-row">
+                    <div class="month">
+                        <label>Expiry</label>
+                        <input type="text" name="expiry" placeholder="MM/YYYY" maxlength="7" required>
+                    </div>
+                    <div class="cvv">
+                        <label>CVV/CVC</label>
+                        <input type="text" name="cvv" placeholder="***" maxlength="4" required>
+                    </div>
+                </div>
+                <button type="submit" class="pay-btn">Pay $9.90</button>
+            </form>
+        </div>
+
+        <div class="succes">
+            <img src="./img/Icon button.png" alt="">
+            <h1>Payment Successfull !</h1>
+            <span>We’ll send you an email with your
+                order details.</span>
+
+        </div>
+
+
+
+
+        <div class="section3">
+            <div class="basic">
+                <h1>Basic</h1>
+            </div>
+            <p>Optimized for budget</p>
+            <h2>Monthly</h2>
+            <span>9 USD</span>
+            <ul>
+                <li>Access to CV Templates</li>
+                <li>Download in PDF format</li>
+                <li>Create CV File</li>
+                <li>ATS compatibility check</li>
+            </ul>
+            <h3>Quickly create and download
+                your CV with ease.
+            </h3>
+
+        </div>
+    </section>
+
+</body>
+
+</html>
