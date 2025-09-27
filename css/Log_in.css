@@ -22,10 +22,11 @@ section {
     flex-wrap: wrap;
     flex-direction: column;
     width: 40%;
+    height: 100vh;
     margin-top: 5%;
     margin-left: 10%;
     position: relative;
-    top: 1px;
+    top: 10px;
     margin-left: 5%;
 }
 

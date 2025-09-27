@@ -160,115 +160,114 @@ section {
      font-size: 20px;
      font-weight: 700;
 }
-/* .succes {
-   display: none; 
-   
-  position: fixed;      /* ekranın üzərinə çıxsın */
-  /* top: 90%;             /* dikey ortala */
-  /* transform: translate(-50%, -50%); 
-  background: #fff;    
-  left: 50%;            /* üfüqi ortala */
-
-  /* padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  width: 30%;
-  margin-top: 20px auto; 
-  margin-left: 40px;
-  height: 30hv;
-  z-index: 1000;     
-}
-.succes h1{
-    prefix: 26px;
-}
-.succes span{
-    color: #D9D9D9;
-    font-size: 20px;
-
-}
-
-.succes.active {
-  display: block;  */ */
-/* }
-.pay-btn:hover {
-    opacity: 0.9;
-} */  */
 .section3 {
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0 0 50px 3px #C3DCFA;
-    width: 25%;
-    height: 70%;
-     background-color: #000;
-    /* background: red; */
-}
-.section3 {
-    background-color: #000;
-    width: 25%;
-    border: none;
-    margin-top: 20px;
-    border-radius: 45px;
-    box-shadow: 0 0 50px 3px #C3DCFA;
-    height: 67vh;
-    /* background: red; */
+    width: clamp(200px, 70%, 300px);
+    border-radius: 15px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 65vh;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    box-shadow: 10px 20px 120px 20px #3285e4;
 
 }
-.section3 h1 {
+
+.basic h1 {
+    color: #fff;
     font-size: 26px;
     font-weight: 700;
-    text-align: center;
-    width: 100%;
+    padding: 10px;
+    width: 120px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #73AFF3, #0088FF);
+    margin-left: 30px;
+    margin-top: 10%;
 }
 
 .section3 p {
     color: #868693;
     font-size: 20px;
     padding: 5px 10px;
-    background-color: #444444;
+    background-color: #DCDCDC;
     border-radius: 10px;
-    margin-top: 10px;
-    margin-left: 50px;
-    text-align: center;
+    margin: 30px auto;
+    justify-content: center;
     width: 230px;
 }
-.basic_3 h1 {
-    color: #fff;
+
+.section3 h2 {
     font-size: 26px;
     font-weight: 700;
-    padding: 10px;
-    width: 150px;
-    border-radius: 10px;
-    background: linear-gradient(to right, #73AFF3, #0088FF);
-    margin-left: 30px;
-    margin-top: 25px;
-}
-.section3 h2{
-     font-size: 26px;
-    font-weight: 700;
     text-align: center;
-    width: 100%;
-    color: #fff;
 }
-.section3 span{
+
+.section3 span {
     display: flex;
     justify-content: center;
+    align-items: center;
     font-size: 26px;
-    color: #fff;
+    color: #868693;
     text-align: center;
 }
+
 .section3 ul {
-    margin-top: 10px;
     margin-left: 25px;
-    color: #fff;
+    color: #868693;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
+
 .section3 ul li::marker {
     color: #009951;
     font-size: 16px;
 }
-.section3 h3{
+
+.section3 p {
+    color: #868693;
+    font-size: 20px;
+    padding: 5px 10px;
+    background-color: #DCDCDC;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10%;
+    justify-content: center;
+    text-align: center;
+    width: 230px;
+}
+
+
+.section3 h3 {
     font-size: 16px;
     text-align: center;
     margin: 30px 20px;
+    margin: 20px 40px;
+}
+
+.section3 button {
+    border: none;
+    border-radius: 25px;
+    background-image: linear-gradient(to right, #0088FF, #D766DD);
+    font-size: 20px;
+    padding: 10px 70px;
+    margin-left: 40px;
+    margin-top: 20px;
+
+}
+
+.section3 button a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    /* text-shadow: 0 0 2px #fff; */
+}
+
+
+
+
+.next button a {
+    font-size: 20px;
+    text-decoration: none;
     color: #fff;
 }
 .back  button{
@@ -295,12 +294,13 @@ section {
    color: #fff;
 }
 
+/* ================= RESPONSIVE DESIGN ================= */
 
-/* Planşet (max-width: 1024px) */
+/* 📱 Planşet (≤1024px) */
 @media (max-width: 1024px) {
   section {
-    height: auto;
     flex-wrap: wrap;
+    height: auto;
     justify-content: center;
   }
 
@@ -321,7 +321,7 @@ section {
   }
 }
 
-/* Böyük telefonlar və kiçik planşetlər (max-width: 768px) */
+/* 📱 Böyük telefonlar və kiçik planşetlər (≤768px) */
 @media (max-width: 768px) {
   section {
     flex-direction: column;
@@ -347,10 +347,12 @@ section {
 
   .section1 button,
   .pay-btn,
+  .section3 button,
   .back button {
     width: 80%;
     padding: 15px;
     font-size: 16px;
+    margin: 20px auto;
   }
 
   .card-wrapper {
@@ -364,7 +366,7 @@ section {
   }
 }
 
-/* Kiçik telefonlar (max-width: 480px) */
+/* 📱 Kiçik telefonlar (≤480px) */
 @media (max-width: 480px) {
   .section1,
   .section2,
@@ -383,7 +385,7 @@ section {
   .section3 p {
     font-size: 14px;
     width: 90%;
-    margin: 8px auto;
+    margin: 10px auto;
   }
 
   .section3 ul {
