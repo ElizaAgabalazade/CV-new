@@ -145,25 +145,7 @@ section {
     color: #009DFF;
 }
 
-/* .btn_send {
-    font-size: 20px;
-    margin-top: 16%;
-    margin-left: 30%;
-    padding: 10px;
-    width: 234px;
-    height: 44px;
-    border-radius: 35px;
-    font-size: 20px;
-    border: 1px solid #fff;
-    color: #fff;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 700;
-    background: linear-gradient(to right,
-            #0088FF,
-            #73AFF3);
-} */
+
 .btn_send {
     color: #fff;
     font-weight: 700;
@@ -219,10 +201,6 @@ section {
     cursor: pointer;
     border: none;
     outline: none;
-
-
-
-
 }
 
 .back button a {

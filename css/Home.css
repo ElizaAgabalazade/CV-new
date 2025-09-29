@@ -335,7 +335,7 @@ section {
 }
 
 .section2 a:hover {
-  width: 80%;             /* indi işləyəcək */
+  width: 80%;             
   cursor: pointer;
   background-image: linear-gradient(to right, #D766DD, #0088FF); /* effekt olsun deyə */
 }
@@ -425,11 +425,11 @@ section {
   font-weight: 700;
   transition: all 0.3s ease;
   position: relative;
-  z-index: 11; /* linki üste çıxarır */
+  z-index: 11; 
 }
 
 .section3 a:hover {
-  width: 80%;             /* indi işləyəcək */
+  width: 80%;            
   cursor: pointer;
   background-image: linear-gradient(to right, #D766DD, #0088FF); /* effekt olsun deyə */
 }
@@ -438,7 +438,7 @@ section {
     text-decoration: none;
     color: #fff;
     font-weight: 700;
-    /* text-shadow: 0 0 2px #fff; */
+ 
 }
 
 

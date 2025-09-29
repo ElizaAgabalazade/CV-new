@@ -285,7 +285,7 @@ section {
     border: none;
     outline: none;
   
-    
+     box-shadow: 0 0 15px 4px #5C17FC;
 
     
 }
@@ -293,6 +293,8 @@ section {
    font-size: 20px;
    text-decoration: none;
    color: #fff;
+   
+
 }
 
 
@@ -382,7 +384,7 @@ section {
 
   .section3 p {
     font-size: 14px;
-    width: 90%;
+    width: 50%;
     margin: 8px auto;
   }
 

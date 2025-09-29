@@ -163,6 +163,7 @@ section {
 
 .section3 {
     width: clamp(200px, 70%, 300px);
+    height: 67vh;
     border-radius: 15px;
     background-color: #fff;
     display: flex;
@@ -194,6 +195,7 @@ section {
     margin: 30px auto;
     justify-content: center;
     width: 230px;
+    
 }
 
 .section3 h2 {
@@ -265,7 +267,7 @@ section {
 .back  button{
     width: 100px;
     display: block;
-
+    box-shadow: 0 0 15px 4px #5C17FC;
     background-color: #73AFF3;
     margin-left: 10%;
     margin-top: 22%;
@@ -284,6 +286,7 @@ section {
    font-size: 20px;
    text-decoration: none;
    color: #fff;
+
 }
 
 

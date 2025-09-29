@@ -7,6 +7,7 @@
 body {
     width: 100%;
     height: 100vh;
+    overflow-y: hidden;
 }
 
 section {
@@ -14,7 +15,7 @@ section {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100%
+    height: 100vh;
 }
 
 .section_left {
@@ -63,27 +64,26 @@ section {
             #D766DD 100%);
 }
 
+
+
 .section_right {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     width: 50%;
     height: 100vh;
-    margin-left: 5%;
+    margin-top: 40px;
+    margin-left: 10%;
     position: relative;
+    top: 10px;
+    margin-left: 5%;
+  
+
 }
-
-.section_right_1 {
-    align-items: flex-start;
-    border-radius: 35px;
-}
-
-
 
 .border-wrapper {
-    width: 87%;
+    width: 90%;
     max-width: 450px;
-    height: calc(100hv -30%);
     border-radius: 35px;
     padding: 2px;
     /* border qalınlığı */
@@ -100,7 +100,6 @@ section {
     font-size: 20px;
     font-weight: 700;
 
-
 }
 
 .inner-box a {
@@ -113,37 +112,45 @@ section {
 
 .inner-box img {
     position: absolute;
-    width: 91px;
-    left: -20px;
-    top: -14px;
-
+   width: 89px;
+    left: -8px;
+    top: -9px;
 }
+
+
 
 .section_right_2 {
     display: flex;
     flex-direction: column;
-    margin-top: 5px;
-    max-width: 400px;
-    height: calc(100vh - 30%);
-}
+    margin-top: 30px;
+    width: 400px;
+    max-width: 500px;
 
+}
+.link_to_forgot{
+    margin-right: 3rem;
+}
 .section_right_2 input {
     margin-top: 5%;
     outline: none;
     border: none;
     padding: 10px;
     font-size: 20px;
-    margin-left: 40px;
+    width: 90%;
     border-radius: 15px;
     background-color: #F5F5F5;
 }
 
 .section_right_3 {
+    display: inline-block;
     width: 100%;
-    margin-top: 20%;
+    margin-top: 90px;
     font-size: 15px;
     color: #6E666F;
     text-align: center;
+
+
+
 }
 
 .section_right_3 a {
@@ -159,10 +166,10 @@ section {
 }
 
 .section_right_3 button {
-    margin-top: 5%;
+    margin-top: 20px;
     background: linear-gradient(to right, #0088FF, #73AFF3);
     color: white;
-    margin-right: 5rem;
+    margin-right: 4rem;
     border: none;
     padding: 20px 80px;
     border-radius: 35px;
@@ -175,8 +182,10 @@ section {
 }
 
 .log_in {
-    background: red;
-    margin-top: 2%;
+    display: inline-block;
+    text-align: center;
+    width: 30vw;
+    margin-left: 10%;
     color: #0088FF;
     font-weight: 700;
     font-size: 20px;
@@ -188,13 +197,16 @@ section {
     align-items: center;
     width: 100%;
     margin-top: 30px;
+     overflow-y: hidden;
 }
 
 .back,
 .next {
-    width: 50%;
-    margin-right: 30%;
-    margin-top: 20%;
+    width: 20%;
+    margin-left: 50px;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .back button {
@@ -207,6 +219,12 @@ section {
     cursor: pointer;
     border: none;
     outline: none;
+    font-size: 20px;
+
+}
+.back button:hover,
+.next button:hover{
+    box-shadow: 0 0 15px 4px blue;
 }
 
 .back button a {
@@ -219,16 +237,16 @@ section {
 .next button {
     width: 100px;
     height: 40px;
+    margin-left: 5%;
+    margin-top: 5%;
+    height: 40px;
+    border-radius: 35px;
     cursor: pointer;
     border: none;
     outline: none;
-    margin-top: 15%;
-    margin-left: 30%;
-    margin-right: 20%;
     font-size: 20px;
     color: #fff;
     background-color: #49D987;
-    padding: 2% 10%;
     border-radius: 35px;
 
 }
