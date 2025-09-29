@@ -49,6 +49,8 @@ section {
 
 .btn {
     font-size: 20px;
+    color: #fff;
+    font-weight: 700;
     margin-top: 10%;
     margin-left: 35%;
     padding: 10px;
@@ -174,12 +176,13 @@ section {
     padding: 20px 80px;
     border-radius: 35px;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+
+
 }
 
-.section_right_3 button a {
-    color: #fff;
-    text-decoration: none;
-}
+
 
 .log_in {
     display: inline-block;
