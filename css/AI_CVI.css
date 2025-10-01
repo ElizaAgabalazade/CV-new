@@ -86,8 +86,8 @@ section {
 }
 
 .profile {
-    width: 90%;
-    height: 30%;
+    width: 450px;
+    height: 150px;
     margin-left: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -97,10 +97,11 @@ section {
     border-radius: 10px;
     position: relative;
 }
+
 .profile {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 
 
@@ -116,38 +117,33 @@ section {
 
 .section1 .fa-envelope {
     position: absolute;
-    top: 44%;
-    margin-left: 5px;
+    top: 50px;
+     left: 5px;
 }
 
-input{
+input {
     width: 10%;
 }
 
-.section1 .fa-location-dot {
-    position: absolute;
-    opacity: 0.6;
-    bottom: 0.6rem;
-    margin-left: 0.5rem;
 
-}
 
 .fa-phone {
     position: absolute;
-    top: 5%;
-    right: 33%;
+    top: 10px;
+    right: 210px;
 }
 
 
 
 
-.fa-location-dot{
+.fa-location-dot {
     position: absolute;
-right: 33%;
-top: 44%;
+    right: 210px;
+    top: 45px;
 
 
 }
+
 .textarea_1,
 .textarea_2,
 .textarea_3,
@@ -159,6 +155,7 @@ top: 44%;
     height: 15%;
     margin-top: 2.5rem;
     margin-left: 30px;
+  
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
@@ -167,23 +164,36 @@ top: 44%;
 
 }
 
-textarea {
+.textarea_1,
+.textarea_2,
+.textarea_3,
+.textarea_4,
+.textarea_5 {
     border-radius: 10px;
     width: 100%;
-     max-height: 200px; /* maksimum hündürlük */
+    max-height: 200px;
+    /* maksimum hündürlük */
     /* maksimal hündürlük */
+    outline: none;
     padding: 5px;
     border: none;
     background-color: #F5F5F5;
     outline: none;
     resize: none;
-    /* istifadəçi özü böyütməsin */
     overflow-y: auto;
-    /* Yoxlama üçün scroll */
-    color: #000;
-    /* yazı qara */
 
 }
+.textarea_1 textarea:focus, 
+.textarea_2 textarea:focus, 
+.textarea_3 textarea:focus, 
+.textarea_4 textarea:focus, 
+.textarea_5 textarea:focus 
+{
+    border: none;
+    outline: none;
+    box-shadow: none; }
+
+
 
 summary::-webkit-details-marker {
     display: none;
@@ -212,8 +222,10 @@ summary span {
 /* Açıldıqda ox fırlansın */
 details[open] .custom-arrow {
     transform: rotate(180deg);
+      margin-bottom: 10px;
 }
-.textarea_2 {
+
+/* .textarea_2 {
     position: relative;
     width: 80%;
     margin-top: 20px;
@@ -221,19 +233,21 @@ details[open] .custom-arrow {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     padding: 10px;
-    background-color: #fff;
+    background-color: #fff; */
 
-}
+
+
 .section2 {
     width: 30%;
     display: flex;
     flex-wrap: wrap;
 }
-.textarea_1 img, 
+
+.textarea_1 img,
 .textarea_2 img,
 .textarea_3 img,
 .textarea_4 img,
-.textarea_5 img{
+.textarea_5 img {
     width: 10px;
 }
 
