@@ -1,3 +1,4 @@
+console.log("salam")
 const usernameInput = document.getElementById("usernameInput");
 const emailInput = document.getElementById("emailInput");
 const passwordInput = document.getElementById("passwordInput");
@@ -33,7 +34,7 @@ const sendData = async () => {
     console.error(err);
     alert("❌ Server xətası!");
   }
-};
+_};
 
 // Click event
 signInBtn.addEventListener("click", sendData);
@@ -47,4 +48,5 @@ emailInput.addEventListener("keypress", e => {
 });
 passwordInput.addEventListener("keypress", e => {
   if (e.key === "Enter") sendData();
+ 
 });

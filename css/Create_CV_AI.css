@@ -137,14 +137,19 @@ section {
     padding: 10px;
     color: #6E666F;
     background: #fff;
+    cursor: pointer;
+    transition: 0.3s;
 
 }
 
+.section1 button.active {
+    background: #0088FF;   /* mavi */
+    color: #fff;           /* ağ yazı */
+}
 
 .section2 {
     width: 60%;
-    height: 60%;
-    margin-bottom: 20px;
+    height: 50%;
 
 }
 
@@ -165,8 +170,10 @@ section {
 .section3 {
     width: 30%;
     height: 50%;
-    display: flex;
-    flex-direction: column;
+   display: flex;
+    flex-direction: row; /* yan-yana düzülsün */
+    align-items: center;
+    justify-content: space-between;
     margin-left: 50px;
     background-color: #fff;
     border-radius: 10px;
@@ -187,8 +194,9 @@ section {
     justify-content: center;
     align-items: center;
     width: 80%;
-    margin-left: 10px;
-    background: red;
+   margin: 0px auto; 
+   margin-left: 17%;
+    margin-bottom: 10p;
 }
 
 .generate {
@@ -203,7 +211,8 @@ section {
     text-align: center;
     color: #fff;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
-    margin-left: 15rem;
+    margin-left: 15rem; 
+     text-align: center;
 }
 
 .btn_download {
