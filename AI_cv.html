@@ -46,14 +46,19 @@
 
         <div class="section1">
             <div class="profile">
-
-
                 <input type="text" placeholder="Your name">
-                <i class="fa-regular fa-envelope" class="fa-envelope"></i> <input type="email" name="" id=""
-                    placeholder="E-mail">
-                <i class="fa-solid fa-phone"></i></i><input type="tel" name="" id="" placeholder="Phone">
-                <i class="fa-solid fa-location-dot"></i><input type="text" placeholder="Address">
-                <i class="fa-solid fa-pen"></i><i class="fa-solid fa-camera"></i>
+                <div class="email">
+                    <i class="fa-regular fa-envelope" class="fa-envelope"></i> <input type="email" name="" id=""
+                        placeholder="E-mail">
+                </div>
+                <div class="phone"><i class="fa-solid fa-phone"></i></i><input type="tel" name="phone"
+                        placeholder="Phone" pattern="^\+[0-9]{1,3}\s?[0-9]{1,14}(\s[0-9]{1,13})?$"
+                        title="Daxil edin: +<CountryCode> <PhoneNumber>" required>
+
+                </div>
+                <div class="adress">
+                    <i class="fa-solid fa-location-dot" class=""></i><input type="text" placeholder="Address">
+                </div>
             </div>
 
             <div class="textarea_1">
@@ -61,7 +66,7 @@
                 <details>
                     <summary>
                         <span class="profile-text">Profile</span>
-                        <img src="./img/arrow - standard.png" class="custom-arrow" alt="arrow">
+                        <img src="./img/arrow.png" class="custom-arrow" alt="arrow">
                     </summary>
 
                     <textarea id="profileInput" placeholder="New Entry" rows="5" cols="50"></textarea>
@@ -71,7 +76,7 @@
                 <details>
                     <summary>
                         <span class="profile-text">Professional Experience</span>
-                        <img src="./img/arrow - standard.png" class="custom-arrow" alt="arrow">
+                        <img src="./img/arrow.png" class="custom-arrow" alt="arrow">
                     </summary>
                     <textarea id="profileInput" placeholder="New Entry" rows="5" cols="50"></textarea>
                 </details>
@@ -80,7 +85,7 @@
                 <details>
                     <summary>
                         <span class="profile-text">Professional Experience</span>
-                        <img src="./img/arrow - standard.png" class="custom-arrow" alt="arrow">
+                        <img src="./img/arrow.png" class="custom-arrow" alt="arrow">
                     </summary>
                     <textarea id="profileInput" placeholder="New Entry" rows="5" cols="50"></textarea>
                 </details>
@@ -89,7 +94,7 @@
                 <details>
                     <summary>
                         <span class="profile-text">Professional Experience</span>
-                        <img src="./img/arrow - standard.png" class="custom-arrow" alt="arrow">
+                        <img src="./img" class="custom-arrow" alt="arrow">
                     </summary>
                     <textarea id="profileInput" placeholder="New Entry" rows="5" cols="50"></textarea>
                 </details>

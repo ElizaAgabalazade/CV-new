@@ -1,10 +1,8 @@
-console.log("salam")
 const usernameInput = document.getElementById("usernameInput");
 const emailInput = document.getElementById("emailInput");
 const passwordInput = document.getElementById("passwordInput");
 const signInBtn = document.getElementById("signInBtn");
 
-// Serverə göndərmə funksiyası
 const sendData = async () => {
   const username = usernameInput.value.trim();
   const email = emailInput.value.trim();
@@ -15,7 +13,10 @@ const sendData = async () => {
     return;
   }
 
+  console.log("➡️ Serverə göndərilir:", { username, email, password });
+
   try {
+    // Real server POST request
     const res = await fetch("/signup", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -23,30 +24,18 @@ const sendData = async () => {
     });
 
     const data = await res.json();
+    console.log("⬅️ Serverdən gələn cavab:", data);
 
     if (data.ok) {
       alert("✅ Qeydiyyat uğurlu!");
-      // window.location.href = "/dashboard";
+      // Məs: window.location.href = "/dashboard";
     } else {
       alert("❌ Xəta! Email artıq mövcuddur və ya məlumat səhvdir.");
     }
   } catch (err) {
-    console.error(err);
+    console.error("❌ Server xətası:", err);
     alert("❌ Server xətası!");
   }
-_};
+};
 
-// Click event
 signInBtn.addEventListener("click", sendData);
-
-// Enter eventləri
-usernameInput.addEventListener("keypress", e => {
-  if (e.key === "Enter") emailInput.focus();
-});
-emailInput.addEventListener("keypress", e => {
-  if (e.key === "Enter") passwordInput.focus();
-});
-passwordInput.addEventListener("keypress", e => {
-  if (e.key === "Enter") sendData();
- 
-});

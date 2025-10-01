@@ -97,9 +97,15 @@ section {
     border-radius: 10px;
     position: relative;
 }
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
 
 .section1 input {
-    width: 50%;
+    width: 40%;
     color: #B1B2B7;
     margin-left: 30px;
     margin-top: 10px;
@@ -110,11 +116,13 @@ section {
 
 .section1 .fa-envelope {
     position: absolute;
-    top: 2.8rem;
+    top: 44%;
     margin-left: 5px;
 }
 
-
+input{
+    width: 10%;
+}
 
 .section1 .fa-location-dot {
     position: absolute;
@@ -126,25 +134,20 @@ section {
 
 .fa-phone {
     position: absolute;
-    bottom: 2.8rem;
-    margin-left: 0.5rem;
+    top: 5%;
+    right: 33%;
 }
 
-.fa-pen {
+
+
+
+.fa-location-dot{
     position: absolute;
-    bottom: 7rem;
-    right: 2rem;
-    color: linear-gradient(to right, #73AFF3, #AE84E6, #D766DD);
-}
+right: 33%;
+top: 44%;
 
-.fa-camera {
-    position: absolute;
-    bottom: 4rem;
-    font-size: 20px;
-    right: 6rem;
-    color: linear-gradient(to right, #73AFF3, #AE84E6, #D766DD);
-}
 
+}
 .textarea_1,
 .textarea_2,
 .textarea_3,
@@ -167,6 +170,7 @@ section {
 textarea {
     border-radius: 10px;
     width: 100%;
+     max-height: 200px; /* maksimum hündürlük */
     /* maksimal hündürlük */
     padding: 5px;
     border: none;
@@ -209,7 +213,6 @@ summary span {
 details[open] .custom-arrow {
     transform: rotate(180deg);
 }
-
 .textarea_2 {
     position: relative;
     width: 80%;
@@ -226,7 +229,13 @@ details[open] .custom-arrow {
     display: flex;
     flex-wrap: wrap;
 }
-
+.textarea_1 img, 
+.textarea_2 img,
+.textarea_3 img,
+.textarea_4 img,
+.textarea_5 img{
+    width: 10px;
+}
 
 
 
@@ -300,7 +309,7 @@ details[open] .custom-arrow {
     margin-top: 1rem;
     text-align: center;
     color: #ffff;
-    width: 250px;
+    width: 100%;
     font-weight: 700;
     font-size: 1.25rem;
     padding: 0.75rem 0.9375rem;
