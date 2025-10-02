@@ -16,7 +16,7 @@ const sendData = async () => {
   console.log("➡️ Serverə göndərilir:", { username, email, password });
 
   try {
-   const res = await fetch("https://jsonplaceholder.typicode.com/users", {
+   const res = await fetch("http://localhost:5000/users", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({ username, email, password })
@@ -24,15 +24,8 @@ const sendData = async () => {
 
     const data = await res.json();
     console.log("⬅️ Serverdən gələn cavab:", data);
-
-
-
-
-
-
-
-    
-    if (data.ok) {
+   console.log(data)
+    if (data.id) {
       alert("✅ Qeydiyyat uğurlu!");
       // Məs: window.location.href = "/dashboard";
     } else {

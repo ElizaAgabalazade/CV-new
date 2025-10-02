@@ -1,0 +1,41 @@
+{
+  "users": [
+    {},
+    {
+      "id": "b69f",
+      "username": "lale",
+      "email": "lale@gmail.com",
+      "password": "lale@gmail.com"
+    },
+    {
+      "id": "1868",
+      "username": "eliz",
+      "email": "rose@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "36b9",
+      "username": "eliz",
+      "email": "rose@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "ea69",
+      "username": "eliz",
+      "email": "rose@gmail.com",
+      "password": "12345"
+    },
+    {
+      "id": "c5b8",
+      "username": "eliz",
+      "email": "rose@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "1f88",
+      "username": "eliz",
+      "email": "rose@gmail.com",
+      "password": "1234"
+    }
+  ]
+}
