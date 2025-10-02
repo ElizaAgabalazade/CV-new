@@ -16,16 +16,22 @@ const sendData = async () => {
   console.log("➡️ Serverə göndərilir:", { username, email, password });
 
   try {
-    // Real server POST request
-    const res = await fetch("/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, email, password })
-    });
+   const res = await fetch("https://jsonplaceholder.typicode.com/users", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ username, email, password })
+});
 
     const data = await res.json();
     console.log("⬅️ Serverdən gələn cavab:", data);
 
+
+
+
+
+
+
+    
     if (data.ok) {
       alert("✅ Qeydiyyat uğurlu!");
       // Məs: window.location.href = "/dashboard";

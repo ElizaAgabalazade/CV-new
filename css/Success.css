@@ -5,20 +5,59 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-color:#F1F1F1;
-}
-.main{
-    background-color: #ffff;
-    width: 40%;
-    margin: 100px;
-}
-.main h1{
-    font-size: 26px;
-    font-weight: 700;
+    background-color: #F1F1F1;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* üfüqi ortalamaq */
+    align-items: center;
+    /* şaquli ortalamaq */
 }
 
-.main p{
+.main {
+    background-color: #ffff;
+    width: 40%;
+    height: 30%;
+    margin: 100px;
+    width: 330px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main h1 {
+    font-size: 26px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.main p {
     color: #D9D9D9;
+     margin-top: 80px;
+}
+
+.go_home {
+    text-align: center;
+    margin-top: 20px;
+    border-radius:10px ;
+}
+
+.go_home a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #167FF7,#009DFF);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.go_home a:hover {
+    background: #0056b3;
 }
