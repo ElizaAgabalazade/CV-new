@@ -16,20 +16,32 @@ const sendData = async () => {
   console.log("➡️ Serverə göndərilir:", { username, email, password });
 
   try {
-   const res = await fetch("http://localhost:5000/users", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ username, email, password })
-});
+    // 1) Mövcud userləri çəkirik
+    const checkRes = await fetch("http://localhost:5000/users");
+    const users = await checkRes.json();
+
+    // 2) Email təkrar olub-olmadığını yoxlayırıq
+    const exists = users.some(user => user.email === email);
+    if (exists) {
+      alert("❌ Bu email artıq mövcuddur!");
+      return;
+    }
+
+    // 3) Əgər email unikal-dırsa → yeni user əlavə edirik
+    const res = await fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username, email, password })
+    });
 
     const data = await res.json();
     console.log("⬅️ Serverdən gələn cavab:", data);
-   console.log(data)
+
     if (data.id) {
       alert("✅ Qeydiyyat uğurlu!");
       // Məs: window.location.href = "/dashboard";
     } else {
-      alert("❌ Xəta! Email artıq mövcuddur və ya məlumat səhvdir.");
+      alert("❌ Qeydiyyat alınmadı.");
     }
   } catch (err) {
     console.error("❌ Server xətası:", err);
