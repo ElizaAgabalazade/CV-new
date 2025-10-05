@@ -15,7 +15,7 @@
 
       const data = await response.json();
 
-      if (data.ok) {
+      if (data.id) {
         alert("✅ Kod göndərildi! Email-inizi yoxlayın.");
       } else {
         alert("❌ Kod göndərilə bilmədi!");

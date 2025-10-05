@@ -108,7 +108,7 @@ section {
     margin-top: 20px;
     margin-left: 10px;
     background: linear-gradient(to right, #0088FF, #73AFF3);
-    color: white;
+    color: white;   
     border: none;
     padding: 20px 80px;
     border-radius: 35px;
@@ -118,6 +118,7 @@ section {
 .section_left_3 button a {
     color: #fff;
     text-decoration: none;
+    font-weight: 700;
 }
 
 .log_in {
@@ -125,6 +126,7 @@ section {
     color: #0088FF;
     font-weight: 700;
     font-size: 20px;
+    
 }
 
 .actions {

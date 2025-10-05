@@ -1,3 +1,6 @@
+const BASE_URL = "http://localhost:5000"; // sonradan backend gələrsə dəyiş
+
+
 const usernameInput = document.getElementById("usernameInput");
 const emailInput = document.getElementById("emailInput");
 const passwordInput = document.getElementById("passwordInput");
@@ -17,7 +20,7 @@ const sendData = async () => {
 
   try {
     // 1) Mövcud userləri çəkirik
-    const checkRes = await fetch("http://localhost:5000/users");
+    const checkRes = await fetch(`${BASE_URL}/users`);
     const users = await checkRes.json();
 
     // 2) Email təkrar olub-olmadığını yoxlayırıq
@@ -37,7 +40,7 @@ const sendData = async () => {
     const data = await res.json();
     console.log("⬅️ Serverdən gələn cavab:", data);
 
-    if (data.id) {
+    if (data.email) {
       alert("✅ Qeydiyyat uğurlu!");
       // Məs: window.location.href = "/dashboard";
     } else {

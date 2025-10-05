@@ -1,10 +1,20 @@
 {
   "users": [
     {
-      "id": "60f5",
+      "id": 1,
+      "email": "test@mail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "email": "rose@mail.com",
+      "password": "qwerty"
+    },
+    {
+      "id": "64bd",
       "username": "eliz",
       "email": "rose@gmail.com",
-      "password": "12314"
+      "password": "12345"
     }
   ]
 }
