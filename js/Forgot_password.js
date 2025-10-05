@@ -1,31 +1,41 @@
- document.getElementById("sendBtn").addEventListener("click", async () => {
-    const email = document.getElementById("emailInput").value.trim();
+const baseURL = "http://localhost:5000";
 
-    if (!email) {
-      alert("❌ Zəhmət olmasa email daxil edin");
+const emailInput = document.getElementById("email");
+const sendBtn = document.getElementById("sendBtn");
+
+sendBtn.addEventListener("click", async () => {
+  // email inputu götür, boşluqları sil və kiçik hərfə çevir
+  const email = emailInput.value.trim().toLowerCase();
+  if (!email) {
+    alert("Email daxil edin!");
+    return;
+  }
+
+  try {
+    // db.json-da email yoxla (case insensitive üçün kiçik hərf)
+    const res = await fetch(`${baseURL}/users`);
+    const users = await res.json();
+
+    // case insensitive müqayisə
+    const matchedUser = users.find(user => user.email.toLowerCase() === email);
+
+    if (!matchedUser) {
+      alert("Belə email ilə istifadəçi tapılmadı!");
       return;
     }
 
-    try {
-      const response = await fetch("/send-code", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ identifier: email }) // backend üçün email göndəririk
-      });
+    // user mövcuddur → OTP yarat
+    const otp = Math.floor(100000 + Math.random() * 900000); // 6 rəqəmli OTP
+    console.log("OTP (test üçün):", otp);
 
-      const data = await response.json();
+    // OTP və email-i localStorage-da saxla
+    localStorage.setItem("resetOtp", otp);
+    localStorage.setItem("resetEmail", email);
 
-      if (data.id) {
-        alert("✅ Kod göndərildi! Email-inizi yoxlayın.");
-      } else {
-        alert("❌ Kod göndərilə bilmədi!");
-      }
-    } catch (err) {
-      alert("❌ Server xətası!");
-      console.error(err);
-    }
-  });
-
-
-
-  
+    // verification səhifəsinə yönləndir
+    window.location.href = "./Verification.html";
+  } catch (err) {
+    console.error(err);
+    alert("Xəta baş verdi!");
+  }
+});
