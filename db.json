@@ -16,5 +16,27 @@
       "email": "rose@gmail.com",
       "password": "12345"
     }
+  ],
+  "otp": [
+    {
+      "id": "a38f",
+      "email": "test@mail.com",
+      "otpCode": 1329
+    },
+    {
+      "id": "796d",
+      "email": "test@mail.com",
+      "otpCode": 8058
+    },
+    {
+      "id": "a0b1",
+      "email": "test@mail.com",
+      "otpCode": 5838
+    },
+    {
+      "id": "1b12",
+      "email": "test@mail.com",
+      "otpCode": 8094
+    }
   ]
 }
