@@ -1,5 +1,4 @@
-const BASE_URL = "http://localhost:5000"; // sonradan backend gələrsə dəyiş
-
+const BASE_URL = "http://localhost:5000";
 
 const usernameInput = document.getElementById("usernameInput");
 const emailInput = document.getElementById("emailInput");
@@ -16,36 +15,32 @@ const sendData = async () => {
     return;
   }
 
-  console.log("➡️ Serverə göndərilir:", { username, email, password });
-
   try {
-    // 1) Mövcud userləri çəkirik
+    // Mövcud istifadəçiləri çəkmək
     const checkRes = await fetch(`${BASE_URL}/users`);
     const users = await checkRes.json();
-
-    // 2) Email təkrar olub-olmadığını yoxlayırıq
     const exists = users.some(user => user.email === email);
+
     if (exists) {
       alert("❌ Bu email artıq mövcuddur!");
       return;
     }
 
-    // 3) Əgər email unikal-dırsa → yeni user əlavə edirik
-    const res = await fetch("http://localhost:5000/users", {
+    // Yeni istifadəçi əlavə et
+    const res = await fetch(`${BASE_URL}/users`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, email, password })
     });
 
-    const data = await res.json();
-    console.log("⬅️ Serverdən gələn cavab:", data);
+    const newUser = await res.json();
+    console.log("⬅️ Yeni user:", newUser);
 
-    if (data.email) {
-      alert("✅ Qeydiyyat uğurlu!");
-      // Məs: window.location.href = "/dashboard";
-    } else {
-      alert("❌ Qeydiyyat alınmadı.");
-    }
+    // ✅ AI_cv.html səhifəsinə yönləndirmə
+    setTimeout(() => {
+      window.location.href = "AI_cv.html";
+    }, 100); // 100ms gecikmə alert və fetch tamamlanması üçün kifayətdir
+
   } catch (err) {
     console.error("❌ Server xətası:", err);
     alert("❌ Server xətası!");

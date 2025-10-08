@@ -1,57 +1,10 @@
 {
   "users": [
     {
-      "id": "1",
-      "email": "test@mail.com",
-      "password": "123456"
-    },
-    {
-      "id": "2",
-      "email": "rose@mail.com",
-      "password": "qwerty"
-    },
-    {
-      "id": "64bd",
+      "id": "f235",
       "username": "eliz",
-      "email": "rose@gmail.com",
-      "password": "12345"
-    }
-  ],
-  "otp": [
-    {
-      "id": "a38f",
-      "email": "test@mail.com",
-      "otpCode": 1329
-    },
-    {
-      "id": "796d",
-      "email": "test@mail.com",
-      "otpCode": 8058
-    },
-    {
-      "id": "a0b1",
-      "email": "test@mail.com",
-      "otpCode": 5838
-    },
-    {
-      "id": "1b12",
-      "email": "test@mail.com",
-      "otpCode": 8094
-    },
-    {
-      "id": "b0db",
-      "email": "test@mail.com",
-      "otpCode": 2303
-    },
-    {
-      "id": "830e",
-      "email": "test@mail.com",
-      "otpCode": 8381
-    },
-    {
-      "id": "5aa8",
-      "email": "test@mail.com",
-      "otpCode": 3383
+      "email": "eliz@gmail.com",
+      "password": "123"
     }
   ]
 }
