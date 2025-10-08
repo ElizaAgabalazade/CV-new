@@ -9,16 +9,26 @@ const sendLogin = async () => {
   const email = emailInput.value.trim();
   const password = passwordInput.value;
 
-  if (!email || !password) return; // boşdursa göndərmə
+  if (!email || !password) {
+    alert("❌ Zəhmət olmasa email və parolu doldurun!");
+    return;
+  }
 
   try {
-    const res = await fetch(`${baseURL}/users?email=${email}&password=${password}`);
+    const res = await fetch(`${baseURL}/users?email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`);
     const data = await res.json();
 
     if (data.length > 0) {
       const user = data[0];
       alert("✅ Login uğurlu! Xoş gəldin " + user.email);
-      // window.location.href = "/dashboard";
+
+      // localStorage-da email-i saxla, lazım ola bilər
+      localStorage.setItem("googleUser", user.email);
+
+      // ✅ Uğurlu login → AI_cv.html səhifəsinə yönləndir
+      setTimeout(() => {
+        window.location.href = "AI_cv.html";
+      }, 500); // alert göstərmək üçün kiçik gecikmə
     } else {
       alert("❌ Email və ya Password səhvdir!");
     }

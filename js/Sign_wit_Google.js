@@ -20,12 +20,15 @@ const loadAccounts = async () => {
         </div>
       `;
 
-      // kliklənəndə həmin email localStorage-da saxlanılır
+      // kliklənəndə həmin email localStorage-da saxlanılır və səhifəyə yönləndirilir
       accDiv.addEventListener("click", () => {
         localStorage.setItem("googleUser", account.email);
         alert(`${account.email} ilə daxil olundu`);
-        // burda yönləndirmə də edə bilərsən, məsələn:
-        // window.location.href = "homepage.html";
+
+        // ✅ AI_cv.html səhifəsinə yönləndirmə
+        setTimeout(() => {
+          window.location.href = "AI_cv.html";
+        }, 100); // kiçik gecikmə alert üçün
       });
 
       box.appendChild(accDiv);
