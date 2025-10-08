@@ -43,11 +43,17 @@ inputs.forEach((input, idx) => {
     // 4 rəqəm daxil edilibsə verify
     const otpEntered = Array.from(inputs).map(i => i.value).join("");
     const storedOtp = localStorage.getItem("resetOtp");
+
     if (otpEntered.length === inputs.length) {
       if (otpEntered === storedOtp) {
         alert("OTP doğrulama uğurlu!");
         localStorage.removeItem("resetOtp");
         console.log("OTP doğrulama uğurlu!");
+
+        // ✅ Uğurlu doğrulama → AI_cv.html səhifəsinə yönləndir
+        setTimeout(() => {
+          window.location.href = "AI_cv.html";
+        }, 1000);
       } else {
         alert("OTP səhvdir!");
         console.log("OTP doğrulama uğursuz!");

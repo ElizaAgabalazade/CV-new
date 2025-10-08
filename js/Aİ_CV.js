@@ -1,101 +1,63 @@
+// ==================== BASE URL ====================
+const baseURL = "http://localhost:5000"; // buraya real server gələcək
 
-const input = document.querySelector("#phone");
-const iti = window.intlTelInput(input, {
-  initialCountry: "auto",
-  geoIpLookup: callback => {
-    fetch('https://ipapi.co/json')
-      .then(res => res.json())
-      .then(data => callback(data.country))
-      .catch(() => callback('US'));
-  },
-  utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
-});
+// ==================== PHONE INPUT ====================
+const phoneInput = document.querySelector("#phone input");
+if (phoneInput) {
+  window.intlTelInput(phoneInput, {
+    initialCountry: "auto",
+    geoIpLookup: callback => {
+      fetch('https://ipapi.co/json')
+        .then(res => res.json())
+        .then(data => callback(data.country))
+        .catch(() => callback('US'));
+    },
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js"
+  });
+}
 
+// ==================== GENERATE / VIEW CV ====================
+const generateCVBtn = document.getElementById("generateCVBtn");
+const cvContainer = document.getElementById("cvContainer");
 
+generateCVBtn.addEventListener("click", async () => {
+  // Textarea-ların və input-ların dəyərlərini toplayırıq
+  const userData = {
+    name: document.querySelector(".profile input[type=text]").value.trim(),
+    email: document.querySelector(".profile input[type=email]").value.trim(),
+    phone: phoneInput ? phoneInput.value.trim() : "",
+    address: document.querySelector(".adress input").value.trim(),
+    profile: document.getElementById("profileInput1").value.trim(),
+    experience: [
+      document.getElementById("profileInput2").value.trim(),
+      document.getElementById("profileInput3").value.trim(),
+      document.getElementById("profileInput4").value.trim()
+    ],
+    certificates: document.getElementById("profileInput5").value.trim()
+  };
 
-
-
-const saveBtn = document.getElementById("saveProfile");
-const profileInput = document.getElementById("profileInput");
-
-saveBtn.addEventListener("click", async () => {
-  const profileText = profileInput.value.trim();
-
-  if (!profileText) {
-    alert("⚠️ Boş buraxmaq olmaz!");
+  // ==================== VALIDATION ====================
+  if (!userData.name || !userData.email) {
+    alert("⚠️ Ad və Email boş ola bilməz!");
     return;
   }
 
   try {
-    const res = await fetch("/api/saveProfile", { // backend endpoint
+    const res = await fetch(`${baseURL}/api/generate-cv`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ profile: profileText })
-    });
-
-    const data = await res.json();
-
-    if (data.ok) {
-      alert("✅ Profil məlumatı uğurla saxlanıldı!");
-    } else {
-      alert("❌ Xəta: " + data.message);
-    }
-  } catch (err) {
-    console.error(err);
-    alert("❌ Serverə qoşulmaq mümkün olmadı!");
-  }
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const generateCVBtn = document.getElementById("generateCVBtn");
-const cvContainer = document.getElementById("cvContainer");
-
-// Arrow function ilə fetch
-const generateCV = async () => {
-  try {
-    // Backend API çağırışı
-    const res = await fetch("/api/generate-cv", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        username: "user123",  // buraya real username əlavə et
-        data: { /* istifadəçinin məlumatları */ }
-      })
+      body: JSON.stringify({ username: userData.name, data: userData })
     });
 
     const data = await res.json();
 
     if (data.ok && data.link) {
-      // CV linkini göstər
       cvContainer.innerHTML = `<a href="${data.link}" target="_blank" class="cvLink">View / Download Your CV</a>`;
     } else {
-      alert("❌ Xəta! CV yaradıla bilmədi.");
+      alert("❌ CV yaradıla bilmədi.");
     }
-
   } catch (err) {
     console.error(err);
     alert("❌ Server xətası!");
   }
-};
-
-generateCVBtn.addEventListener("click", generateCV);
+});
