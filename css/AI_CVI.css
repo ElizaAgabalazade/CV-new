@@ -4,7 +4,9 @@
     padding: 0;
     overflow-x: hidden;
 }
-
+html, body {
+  overflow-x: hidden;
+}
 body {
     width: 100vw;
     height: 100vh;
@@ -331,4 +333,53 @@ details[open] .custom-arrow {
     margin-bottom: 4rem;
     margin-left: 5px;
     background: linear-gradient(to right, #73AFF3, #AE84E6, #D766DD)
+}
+/* 📲 Planşetlər üçün */
+@media (max-width: 1024px) {
+  body {
+    transform: scale(0.9);
+    transform-origin: top center;
+  }
+}
+
+/* 📱 Telefonlar üçün */
+@media (max-width: 768px) {
+  body {
+    transform: scale(0.8);
+    transform-origin: top center;
+  }
+
+  header, section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section1,
+  .section2,
+  .section3 {
+    width: 90%;
+  }
+
+  .profile {
+    width: 100%;
+  }
+}
+
+/* 📱 Kiçik telefonlar üçün */
+@media (max-width: 480px) {
+  body {
+    transform: scale(0.7);
+    transform-origin: top center;
+  }
+
+  .nav ul li a {
+    font-size: 18px;
+  }
+
+  .send_create a,
+  .send_generate button,
+  .send_custom button,
+  .section3 button {
+    font-size: 0.9rem;
+  }
 }
