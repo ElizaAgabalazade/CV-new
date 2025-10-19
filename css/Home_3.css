@@ -6,13 +6,12 @@
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     position: relative;
     z-index: 0;
-    height: 100%;
-    width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden; /* yalnız üfüqi scroll-u blokla */
+    overflow-y: auto; /* şaquli scroll lazım olsa görünsün */
 }
 
 header {
@@ -138,9 +137,9 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 62vh;
-    overflow: hidden;
+    width: 100vw;
+   min-height: 100vh; /* 62vh çox azdır, blur olanda kəsilir */
+    overflow: visible; /* burda gizlətmə! */
 }
 
 .bubble3,
@@ -182,20 +181,17 @@ section {
 }
 
 .section_main {
-    position: relative;
-    height: auto;
-    min-height: 100%;
+   position: relative;
     width: 50%;
-    margin-top: 20%;
-    margin-bottom: 20%;
     background: #fff;
     border-radius: 20px;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 1;
+    flex-direction: column;
     box-sizing: border-box;
+    margin: 10% 0; /* 20% çox idi */
+    overflow: hidden; /* blur daşmasın deyə yalnız burda */
 
 }
 
@@ -221,10 +217,26 @@ section {
     pointer-events: none;
     /* klikləri bloklamasın */
 }
+/* blur effekti */
+.section_main .content {
+    filter: blur(5px);
+    transition: filter 0.4s ease;
+}
+.section_main .content img{
+     display: block;
+    margin: 20px auto; /* ortada saxlayır */
+    max-width: 80%; /* böyük ekranlarda çox böyüməsin */
+    height: auto;
+}
 
 .section_main h2 {
-    text-align: center;
+   text-align: center;
     font-size: 48px;
+    width: 50%;
+    display: block; /* inline-block əvəzinə */
+    margin: 0 auto; /* ortada yerləşməsi üçün */
+
+
 }
 
 .context_2 {
@@ -236,6 +248,7 @@ section {
 }
 
 .upload-box {
+    filter: blur(5px);
     position: relative;
     display: flex;
     flex-direction: row;
