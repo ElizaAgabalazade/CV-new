@@ -8,11 +8,11 @@
 body {
     width: 100vw;
     height: 100vh;
-     position: relative;
+    position: relative;
     z-index: 0;
     height: 100%;
     width: 100vw;
-      overflow: hidden;
+    overflow: hidden;
 }
 
 header {
@@ -164,7 +164,7 @@ section {
 }
 
 .bubble5 {
-       bottom: 40%;
+    bottom: 40%;
     left: 33%;
     /* background-color: blue; */
 }
@@ -181,123 +181,410 @@ section {
     /* background: #000; */
 }
 
-
-
-
-
-
-
-
-
-footer{
+.section_main {
+    position: relative;
+    height: auto;
+    min-height: 100%;
+    width: 50%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    background: #fff;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    width:100vw;
-    height: 60vh;
-    
-}
-.footer_top{
-    width:100vw;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    box-sizing: border-box;
 
 }
-.top_contexts{
+
+/* Gradient border üçün pseudo-element */
+.section_main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0;
+    /* bütün div-in ətrafını əhatə edir */
+    padding: 2px;
+    /* border qalınlığı */
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #0088FF, #D766DD);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    /* klikləri bloklamasın */
+}
+
+.section_main h2 {
+    text-align: center;
+    font-size: 48px;
+}
+
+.context_2 {
+    color: #0088FF;
+}
+
+.context_1 {
+    color: #25BB66;
+}
+
+.upload-box {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    /* elementlər yan-yana */
+    height: auto;
+    min-height: 30%;
+    width: 60%;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    box-sizing: border-box;
+}
+
+.upload-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    inset: 0;
+    /* bütün div-in ətrafını əhatə edir */
+    padding: 1px;
+    /* border qalınlığı */
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #0088FF, #D766DD);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    /* klikləri bloklamasın */
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.upload-box_left {
+    width: 50%;
+    margin-left: 30%;
+}
+
+.upload-label {
+    font-size: 20px;
+    position: absolute;
+    left: 30%;
+
+    /* sancaq ölçüsü */
+    cursor: pointer;
+    color: #555;
+    transition: 0.3s ease;
+}
+
+.upload-label:hover {
+    color: linear-gradient(to bottom, #8EE4B3, #19C162);
+    transform: scale(1.1);
+}
+
+.upload-box h3 {
+    font-size: 28px;
+    color: #868693;
+    font-weight: 800;
+}
+
+
+
+
+
+.upload-box_right {
+    width: 20%;
+    height: 40%;
+    margin-left: 3px;
+    position: relative;
+}
+
+.scan-btn {
+    position: absolute;
+    text-decoration: none;
+    background: linear-gradient(to bottom, #8EE4B3, #19C162);
+    color: #fff;
+    top: 20px;
+    padding: 4px 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: 0.3s ease;
+}
+
+.scan-btn:hover {
+    background: #006edc;
+    transform: translateY(-1px);
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 60vh;
+
+}
+
+.footer_top {
+    width: 100vw;
+
+}
+
+.top_contexts {
     display: flex;
     width: 100%;
-    
-}
-.inside{
-     background: #B1B2B7;
-     height: 50vh;
-     
-}
-.about{
- width: 10%;
- margin-left: 40%;
- margin-top: 20px;
-}
-.contact{
- width: 10%;
- margin-top: 20px;
- margin-left: 20px;
 
 }
-.faq{
- width: 10%;
- margin-top: 20px;
-  margin-left: 20px;
+
+.inside {
+    background: #B1B2B7;
+    height: 50vh;
 
 }
-.help{
- width: 10%;
- margin-top: 20px;
-  margin-left: 20px;
+
+.about {
+    width: 10%;
+    margin-left: 40%;
+    margin-top: 20px;
+}
+
+.contact {
+    width: 10%;
+    margin-top: 20px;
+    margin-left: 20px;
 
 }
-   
+
+.faq {
+    width: 10%;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
+.help {
+    width: 10%;
+    margin-top: 20px;
+    margin-left: 20px;
+
+}
+
 .about h3,
 .contact h3,
 .faq h3,
-.help h3{
-color: #fff;
-font-size: 20px;
+.help h3 {
+    color: #fff;
+    font-size: 20px;
 }
 
-.about p, 
+.about p,
 .contact p,
 .faq p,
-.help p
-{
-color:#D9D9D9;
-font-size: 20px;
+.help p {
+    color: #D9D9D9;
+    font-size: 20px;
 }
-.middle{
+
+.middle {
     margin-top: 30px;
     position: relative;
     display: flex;
 }
-.middle input{
+
+.middle input {
     width: 20%;
     margin-left: 30px;
     position: absolute;
-    top:6px;
+    top: 6px;
     padding: 15px;
     outline: none;
     color: #fff;
     background-color: #868693;
     flex: 1;
 }
+
 .middle input::placeholder {
-    color: #fff; /* placeholder rəngi */
+    color: #fff;
+    /* placeholder rəngi */
     opacity: 1;
 }
+
 .send {
-    margin-left:300px;
+    margin-left: 300px;
     cursor: pointer;
 }
-.hr{
+
+.hr {
     margin-top: 40px;
 }
-.bottom{
-   display: flex;
-   width: 100%;
-   
+
+.bottom {
+    display: flex;
+    width: 100%;
+
 }
+
 .bottom img {
     margin-left: 20px;
 }
-.bottom_left{
-     display: flex;
+
+.bottom_left {
+    display: flex;
     margin-left: 25%;
     width: 20%;
 }
-.bottom_right{
+
+.bottom_right {
     display: flex;
-    margin-left:200px;
+    margin-left: 200px;
 }
-.bottom_right p{
-    margin-left:40px;
+
+.bottom_right p {
+    margin-left: 40px;
     font-size: 26px;
     color: #fff;
     font-weight: 700;
 
+}
+
+/* Tablet (768px-dən aşağı) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .logo {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 10px;
+    }
+
+    .nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .nav ul li a {
+        width: auto;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .sign_log {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .section_main {
+        width: 90%;
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+
+    .upload-box {
+        flex-direction: column;
+        width: 90%;
+        min-height: auto;
+    }
+
+    .upload-box_left,
+    .upload-box_right {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .upload-label,
+    .scan-btn {
+        position: relative;
+        top: 0;
+    }
+
+    footer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .top_contexts,
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .middle input {
+        width: 80%;
+        margin-left: 10%;
+        position: relative;
+    }
+
+    .send {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+
+/* Mobil (480px-dən aşağı) */
+@media (max-width: 480px) {
+    .section_main h2 {
+        font-size: 32px;
+    }
+
+    .upload-box h3,
+    .upload-label,
+    .scan-btn {
+        font-size: 16px;
+    }
+
+    .nav ul li a {
+        font-size: 16px;
+    }
+
+    .sign_log a,
+    .sign_log button {
+        font-size: 16px;
+        padding: 8px 20px;
+    }
+
+    .bottom_left,
+    .bottom_right {
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 20px;
+        width: 90%;
+        align-items: center;
+    }
+
+    .bottom_right p {
+        margin-left: 0;
+        font-size: 18px;
+    }
 }
