@@ -138,7 +138,7 @@ section {
     justify-content: center;
     align-items: center;
     width: 100vw;
-   min-height: 100vh; /* 62vh çox azdır, blur olanda kəsilir */
+   min-height: 62vh; /* 62vh çox azdır, blur olanda kəsilir */
     overflow: visible; /* burda gizlətmə! */
 }
 
@@ -183,6 +183,7 @@ section {
 .section_main {
    position: relative;
     width: 50%;
+    height: 70vh;
     background: #fff;
     border-radius: 20px;
     display: flex;
@@ -190,7 +191,7 @@ section {
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
-    margin: 10% 0; /* 20% çox idi */
+    margin: 0; /* 20% çox idi */
     overflow: hidden; /* blur daşmasın deyə yalnız burda */
 
 }
@@ -217,135 +218,15 @@ section {
     pointer-events: none;
     /* klikləri bloklamasın */
 }
-/* blur effekti */
-.section_main .content {
-    filter: blur(5px);
-    transition: filter 0.4s ease;
-}
-.section_main .content img{
-     display: block;
-    margin: 20px auto; /* ortada saxlayır */
-    max-width: 80%; /* böyük ekranlarda çox böyüməsin */
-    height: auto;
-}
-
-.section_main h2 {
-   text-align: center;
-    font-size: 48px;
-    width: 50%;
-    display: block; /* inline-block əvəzinə */
-    margin: 0 auto; /* ortada yerləşməsi üçün */
-
+.scaning{
+    width: 40vw;
+    height: 100vh;
+    background-image: url("../img/Rectangle\ 16.png");
+     background-size: cover;   /* şəkili divin ölçüsünə uyğunlaşdırır */
+  background-repeat: no-repeat; /* təkrarlanmamasını təmin edir */
 
 }
 
-.context_2 {
-    color: #0088FF;
-}
-
-.context_1 {
-    color: #25BB66;
-}
-
-.upload-box {
-    filter: blur(5px);
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    /* elementlər yan-yana */
-    height: auto;
-    min-height: 30%;
-    width: 60%;
-    margin-top: 20px;
-    background: #fff;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    box-sizing: border-box;
-}
-
-.upload-box::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    inset: 0;
-    /* bütün div-in ətrafını əhatə edir */
-    padding: 1px;
-    /* border qalınlığı */
-    border-radius: 20px;
-    background: linear-gradient(to bottom, #0088FF, #D766DD);
-    -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
-    pointer-events: none;
-    /* klikləri bloklamasın */
-}
-
-input[type="file"] {
-    display: none;
-}
-
-.upload-box_left {
-    width: 50%;
-    margin-left: 30%;
-}
-
-.upload-label {
-    font-size: 20px;
-    position: absolute;
-    left: 30%;
-
-    /* sancaq ölçüsü */
-    cursor: pointer;
-    color: #555;
-    transition: 0.3s ease;
-}
-
-.upload-label:hover {
-    color: linear-gradient(to bottom, #8EE4B3, #19C162);
-    transform: scale(1.1);
-}
-
-.upload-box h3 {
-    font-size: 28px;
-    color: #868693;
-    font-weight: 800;
-}
-
-
-
-
-
-.upload-box_right {
-    width: 20%;
-    height: 40%;
-    margin-left: 3px;
-    position: relative;
-}
-
-.scan-btn {
-    position: absolute;
-    text-decoration: none;
-    background: linear-gradient(to bottom, #8EE4B3, #19C162);
-    color: #fff;
-    top: 20px;
-    padding: 4px 10px;
-    border-radius: 10px;
-    font-size: 20px;
-    transition: 0.3s ease;
-}
-
-.scan-btn:hover {
-    background: #006edc;
-    transform: translateY(-1px);
-}
 
 
 
