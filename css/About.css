@@ -1,0 +1,179 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+
+}
+header{
+    height: 10vh;
+    width: 100%;
+    background: linear-gradient(to right, #0088FF,#D766DD);
+    padding: 4px;
+    position: relative;
+
+
+}
+header .arrow{
+    position: absolute;
+
+}
+header a{
+    width: 100%;   
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+     padding: 2px;
+
+}
+header h2{
+    position: absolute;
+    left: 60px;
+    bottom: 10px;
+}
+section{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+}
+
+.opening{
+   margin: auto;
+   margin-top: 20px;
+   width: 100%;
+   text-align: center;
+    background: linear-gradient(to right, #5C17FC, #D766DD);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+   /* background-color: red; */
+}
+.section_left{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 45vw;
+    height: 90%;
+    margin-bottom: 20px;
+    background: #F5F5F5;
+    border-radius: 10px;
+}
+.section_left p{
+    width: 88%;
+    font-size: 16px;
+    margin-top: 100px;
+    margin-bottom: 10px;
+    color: #868693;
+    margin-left: 30px;
+}
+.section_left span{
+    color: #5C17FC;
+    font-weight: 700;
+}
+
+/* =============================== */
+/* 📱 Telefonlar üçün (max 768px) */
+/* =============================== */
+@media (max-width: 768px) {
+  body {
+    height: auto;
+  }
+
+  header {
+    height: auto;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  header a {
+    font-size: 22px;
+  }
+
+  header h2 {
+    position: static;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .opening {
+    font-size: 24px;
+    width: 90%;
+    margin: 15px auto;
+  }
+
+  .section_left,
+  .section_right {
+    width: 90%;
+    margin: 10px 0;
+    height: auto;
+  }
+
+  .section_left p {
+    width: 90%;
+    margin: 30px auto;
+    font-size: 14px;
+    text-align: justify;
+  }
+}
+
+/* =============================== */
+/* 💻 Planşetlər üçün (max 1024px) */
+/* =============================== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  header {
+    height: auto;
+    padding: 8px 0;
+  }
+
+  header a {
+    font-size: 24px;
+  }
+
+  header h2 {
+    position: static;
+    margin-top: 5px;
+    text-align: center;
+  }
+
+  section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .opening {
+    font-size: 28px;
+    margin: 20px auto;
+  }
+
+  .section_left,
+  .section_right {
+    width: 80%;
+    margin: 10px;
+    height: auto;
+  }
+
+  .section_left p {
+    width: 85%;
+    font-size: 15px;
+    margin: 40px auto;
+  }
+}
+
+
+
+
+
+
+
+
+.section_right{
+    width: 45vw;
+}
