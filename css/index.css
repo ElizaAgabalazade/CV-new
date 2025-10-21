@@ -307,11 +307,16 @@ footer {
     color: #fff;
     font-size: 20px;
 }
-
+.faq a,
+.help a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
 .about p,
-.contact p,
-.faq p,
-.help p {
+.contact p
+ {
+    
     color: #D9D9D9;
     font-size: 20px;
 }
