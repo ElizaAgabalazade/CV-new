@@ -10,8 +10,10 @@ body {
     min-height: 100vh;
     position: relative;
     z-index: 0;
-    overflow-x: hidden; /* yalnız üfüqi scroll-u blokla */
-    overflow-y: auto; /* şaquli scroll lazım olsa görünsün */
+    overflow-x: hidden;
+    /* yalnız üfüqi scroll-u blokla */
+    overflow-y: auto;
+    /* şaquli scroll lazım olsa görünsün */
 }
 
 header {
@@ -138,8 +140,10 @@ section {
     justify-content: center;
     align-items: center;
     width: 100vw;
-   min-height: 62vh; /* 62vh çox azdır, blur olanda kəsilir */
-    overflow: visible; /* burda gizlətmə! */
+    min-height: 62vh;
+    /* 62vh çox azdır, blur olanda kəsilir */
+    overflow: visible;
+    /* burda gizlətmə! */
 }
 
 .bubble3,
@@ -181,7 +185,7 @@ section {
 }
 
 .section_main {
-   position: relative;
+    position: relative;
     width: 50%;
     height: 70vh;
     background: #fff;
@@ -191,8 +195,10 @@ section {
     align-items: center;
     flex-direction: column;
     box-sizing: border-box;
-    margin: 0; /* 20% çox idi */
-    overflow: hidden; /* blur daşmasın deyə yalnız burda */
+    margin: 0;
+    /* 20% çox idi */
+    overflow: hidden;
+    /* blur daşmasın deyə yalnız burda */
 
 }
 
@@ -218,12 +224,15 @@ section {
     pointer-events: none;
     /* klikləri bloklamasın */
 }
-.scaning{
+
+.scaning {
     width: 40vw;
     height: 100vh;
     background-image: url("../img/Rectangle\ 16.png");
-     background-size: cover;   /* şəkili divin ölçüsünə uyğunlaşdırır */
-  background-repeat: no-repeat; /* təkrarlanmamasını təmin edir */
+    background-size: cover;
+    /* şəkili divin ölçüsünə uyğunlaşdırır */
+    background-repeat: no-repeat;
+    /* təkrarlanmamasını təmin edir */
 
 }
 
@@ -246,6 +255,7 @@ footer {
 .top_contexts {
     display: flex;
     width: 100%;
+    gap: 1rem;
 
 }
 
@@ -262,7 +272,7 @@ footer {
 }
 
 .contact {
-    width: 10%;
+    width: 20%;
     margin-top: 20px;
     margin-left: 20px;
 
@@ -283,11 +293,16 @@ footer {
 }
 
 .about h3,
-.contact h3,
-.faq h3,
-.help h3 {
+.contact h3 {
     color: #fff;
     font-size: 20px;
+}
+
+.faq a,
+.help a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 .about p,
@@ -357,5 +372,592 @@ footer {
     font-size: 26px;
     color: #fff;
     font-weight: 700;
+
+}
+
+
+
+/* === 📱 Kiçik telefonlar (max-width: 480px) === */
+@media (max-width: 480px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        /* sol küncə hizala */
+        padding-left: 20px;
+        /* bir az boşluq */
+        height: auto;
+
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        /* word bubble-ın üstünə düşsün */
+        align-items: flex-start;
+        /* hamısı sola */
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .bubble {
+        width: 10%;
+    }
+
+    .word {
+        position: absolute;
+        width: 20%;
+        bottom: 1rem;
+        left: 1rem;
+    }
+
+    .check {
+        position: absolute;
+        top: 0.6rem;
+        left: 7.5rem;
+    }
+
+
+
+    .nav {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav ul li a {
+        font-size: 18px;
+    }
+
+    .sign_log {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .sign_log a,
+    .sign_log button {
+        font-size: 16px;
+        margin: 5px 0;
+    }
+
+    /* === SECTION === */
+    section {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .section_main {
+        width: 90%;
+        height: auto;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .scaning {
+        width: 100%;
+        height: 200px;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .bubble3,
+    .bubble4,
+    .bubble5,
+    .bubble6,
+    .bubble7 {
+        display: none;
+        /* balaca ekranda kəpənəklər və fon elementləri gizlənsin */
+    }
+
+    /* === FOOTER === */
+    footer {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .top_contexts {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .about,
+    .contact,
+    .faq,
+    .help {
+        width: 90%;
+        margin: 4px auto;
+        text-align: center;
+    }
+
+    .about h3,
+    .contact h3,
+    .faq a,
+    .help a {
+        font-size: 14px;
+    }
+
+    .about p,
+    .contact p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .middle {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6px;
+        width: 100%;
+    }
+
+    .middle input {
+        width: 80%;
+        margin: 4px 0;
+        padding: 8px;
+        font-size: 12px;
+        position: static;
+        border-radius: 10px;
+    }
+
+    .send {
+        margin: 5px 0 0 0;
+        width: 50px;
+        height: 25px;
+        transform: scale(0.8);
+    }
+
+    .hr {
+        width: 80%;
+        margin: 10px auto;
+        height: 1px;
+        background-color: #fff;
+        border: none;
+    }
+
+    .bottom {
+        display: flex;
+        width: 100vw;
+        height: 5vh;
+        padding-bottom: 5px;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 4px;
+    }
+
+    .bottom_left {
+        width: 20%;
+
+
+    }
+
+    .bottom_left img {
+        width: 30%;
+    }
+
+    .bottom_right {
+        width: 80%;
+        margin-left: 40px;
+    }
+
+    .bottom_left,
+    .bottom_right {
+        margin-left: 0;
+        margin-top: 3px;
+        width: auto;
+    }
+
+    .bottom img {
+        max-width: 25px;
+    }
+
+    .bottom_right p {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .bubble3,
+    .bubble4,
+    .bubble5,
+    .bubble6,
+    .bubble7 {
+        display: none;
+    }
+}
+
+
+/* === 💻 Planşetlər (481px – 768px) === */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        /* sol küncə hizala */
+        padding-left: 20px;
+        /* bir az boşluq */
+        height: auto;
+
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        /* word bubble-ın üstünə düşsün */
+        align-items: flex-start;
+        /* hamısı sola */
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .word {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .check {
+        position: absolute;
+        bottom: 2.5rem;
+        left: 9.5rem;
+    }
+
+    .nav {
+        width: 100%;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .nav ul li a {
+        font-size: 22px;
+    }
+
+    .sign_log {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    .section_main {
+        width: 75%;
+        height: auto;
+    }
+
+    .scaning {
+        width: 90%;
+        height: 350px;
+        background-size: cover;
+        margin: 10px auto;
+    }
+
+    .bubble3,
+    .bubble4,
+    .bubble5,
+    .bubble6,
+    .bubble7 {
+        opacity: 0.4;
+        filter: blur(2px);
+    }
+
+
+    /* === FOOTER === */
+    footer {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .top_contexts {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .about,
+    .contact,
+    .faq,
+    .help {
+        width: 90%;
+        margin: 4px auto;
+        text-align: center;
+    }
+
+    .about h3,
+    .contact h3,
+    .faq a,
+    .help a {
+        font-size: 14px;
+    }
+
+    .about p,
+    .contact p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .middle {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6px;
+        width: 100%;
+    }
+
+    .middle input {
+        width: 80%;
+        margin: 4px 0;
+        padding: 8px;
+        font-size: 12px;
+        position: static;
+        border-radius: 10px;
+    }
+
+    .send {
+        margin: 5px 0 0 0;
+        width: 50px;
+        height: 25px;
+        transform: scale(0.8);
+    }
+
+    .hr {
+        width: 80%;
+        margin: 10px auto;
+        height: 1px;
+        background-color: #fff;
+        border: none;
+    }
+
+    .bottom {
+        display: flex;
+        width: 100vw;
+        height: 5vh;
+        padding-bottom: 5px;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 4px;
+    }
+
+    .bottom_left {
+        width: 20%;
+
+
+    }
+
+    .bottom_left img {
+        width: 30%;
+    }
+
+    .bottom_right {
+        width: 80%;
+        margin-left: 40px;
+    }
+
+    .bottom_left,
+    .bottom_right {
+        margin-left: 0;
+        margin-top: 3px;
+        width: auto;
+    }
+
+    .bottom img {
+        max-width: 25px;
+    }
+
+    .bottom_right p {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .bubble3,
+    .bubble4,
+    .bubble5,
+    .bubble6,
+    .bubble7 {
+        display: none;
+    }
+}
+
+
+/* === 🖥 Kiçik noutbuk (769px – 1024px) === */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 30%;
+    }
+
+    .nav {
+        width: 50%;
+    }
+
+    .nav ul li a {
+        font-size: 24px;
+    }
+
+    .sign_log {
+        width: 100%;
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+
+    .section_main {
+        width: 60%;
+        height: auto;
+    }
+
+    .scaning {
+        width: 70%;
+        height: 450px;
+        background-size: cover;
+    }
+
+    /* === FOOTER === */
+    footer {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    .top_contexts {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        padding-top: 5px;
+    }
+
+    .about,
+    .contact,
+    .faq,
+    .help {
+        width: 90%;
+        margin: 4px auto;
+        text-align: center;
+    }
+
+    .about h3,
+    .contact h3,
+    .faq a,
+    .help a {
+        font-size: 14px;
+    }
+
+    .about p,
+    .contact p {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .middle {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 6px;
+        width: 100%;
+    }
+
+    .middle input {
+        width: 80%;
+        margin: 4px 0;
+        padding: 8px;
+        font-size: 12px;
+        position: static;
+        border-radius: 10px;
+    }
+
+    .send {
+        margin: 5px 0 0 0;
+        width: 50px;
+        height: 30px;
+        transform: scale(0.8);
+    }
+
+    .hr {
+        width: 80%;
+        margin: 10px auto;
+        height: 1px;
+        background-color: #fff;
+        border: none;
+    }
+
+    .bottom {
+        display: flex;
+        width: 100vw;
+        height: 5vh;
+        padding-bottom: 5px;
+        flex-direction: row;
+        justify-content: space-around;
+        gap: 4px;
+    }
+
+    .bottom_left {
+        width: 20%;
+
+
+    }
+
+    .bottom_left img {
+        width: 30%;
+    }
+
+    .bottom_right {
+        width: 80%;
+        margin-left: 40px;
+    }
+
+    .bottom_left,
+    .bottom_right {
+        margin-left: 0;
+        margin-top: 3px;
+        width: auto;
+    }
+
+    .bottom img {
+        max-width: 25px;
+    }
+
+    .bottom_right {
+        gap: 3rem;
+    }
+
+    .bottom_right p {
+        font-size: 12px;
+        margin-left: 0;
+    }
+
+    .bubble3,
+    .bubble4,
+    .bubble5,
+    .bubble6,
+    .bubble7 {
+        display: none;
+    }
+
+
+
+
 
 }

@@ -351,6 +351,7 @@ footer {
 .top_contexts {
     display: flex;
     width: 100%;
+    gap: 1rem;
 
 }
 
@@ -367,7 +368,7 @@ footer {
 }
 
 .contact {
-    width: 10%;
+    width: 20%;
     margin-top: 20px;
     margin-left: 20px;
 
@@ -388,17 +389,21 @@ footer {
 }
 
 .about h3,
-.contact h3,
-.faq h3,
-.help h3 {
+.contact h3 {
     color: #fff;
     font-size: 20px;
 }
 
+.faq a,
+.help a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 .about p,
-.contact p,
-.faq p,
-.help p {
+.contact p {
+
     color: #D9D9D9;
     font-size: 20px;
 }
@@ -465,126 +470,363 @@ footer {
 
 }
 
-/* Tablet (768px-dən aşağı) */
+/* ===================== RESPONSIVE ===================== */
+
+/* ✅ Planşetlər üçün (768px və aşağı) */
 @media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     header {
         flex-direction: column;
+        align-items: flex-start;
+        /* sol küncə hizala */
+        padding-left: 20px;
+        /* bir az boşluq */
         height: auto;
-        padding: 10px 0;
+
     }
 
     .logo {
-        width: 50%;
-        margin-left: 25%;
-        margin-top: 10px;
+       width: 100%;
+    display: flex;
+    flex-direction: row; /* word bubble-ın üstünə düşsün */
+    align-items: flex-start; /* hamısı sola */
+    position: relative;
+    margin-top: 10px;
+    }
+
+    .word {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .check {
+         position: absolute;
+        bottom: 2.5rem;
+        left: 9.5rem;
     }
 
     .nav {
-        width: 100%;
-        margin-top: 10px;
+        width: 90%;
+        margin: 10px auto;
     }
 
     .nav ul {
         flex-direction: column;
         align-items: center;
-        margin-top: 20px;
+        margin: 10px 0;
+        gap: 10px;
     }
 
     .nav ul li a {
-        width: auto;
-        font-size: 20px;
-        margin-bottom: 10px;
+        font-size: 22px;
     }
 
     .sign_log {
+        flex-direction: column;
         width: 100%;
-        justify-content: center;
-        margin-top: 10px;
+        margin: 10px 0;
+    }
+
+    .sign_log a {
+        font-size: 22px;
+    }
+
+    .sign_log button {
+        padding: 8px 25px;
+    }
+
+    section {
+        height: auto;
+        
     }
 
     .section_main {
-        width: 90%;
+        width: 80%;
         margin-top: 10%;
-        margin-bottom: 10%;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .section_main h2 {
+        font-size: 34px;
     }
 
     .upload-box {
         flex-direction: column;
-        width: 90%;
-        min-height: auto;
+        width: 80%;
+        padding: 10px;
     }
 
-    .upload-box_left,
+    .upload-label {
+        font-size: 18px;
+        position: static;
+        margin-bottom: 10px;
+    }
+
     .upload-box_right {
         width: 100%;
-        margin-left: 0;
+        text-align: center;
         margin-top: 10px;
-        display: flex;
-        justify-content: center;
     }
 
-    .upload-label,
     .scan-btn {
-        position: relative;
-        top: 0;
+        position: static;
+        font-size: 18px;
+        padding: 6px 12px;
     }
 
-    footer {
+ footer {
+    height: auto; /* sabit hündürlük vermə */
+    padding: 20px 0;
+  }
+
+  .inside {
+    height: auto; /* 50vh çoxdu, adaptiv et */
+    padding-bottom: 20px;
+  }
+
+  .top_contexts {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .about,
+  .contact,
+  .faq,
+  .help {
+    width: 90%;
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  .about h3,
+  .contact h3,
+  .faq a,
+  .help a {
+    font-size: 16px; /* bir az kiçilt */
+  }
+
+  .about p,
+  .contact p,
+  .faq p,
+  .help p {
+    font-size: 14px;
+  }
+
+  .middle {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .middle input {
+    width: 80%;
+    margin-left: 0;
+    position: static;
+    padding: 10px;
+  }
+
+  .send {
+    margin-left: 0;
+    margin-top: 10px;
+    transform: scale(0.9); /* bir az kiçilt */
+  }
+
+  .hr {
+    margin-top: 20px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .bottom_left,
+  .bottom_right {
+    margin: 5px 0;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .bottom img {
+    width: 30px;
+    height: auto;
+  }
+
+  .bottom_right p {
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+/* ✅ Telefonlar üçün (480px və aşağı) */
+@media (max-width: 480px) {
+
+       body {
+        overflow-x: hidden;
+    }
+
+    header {
         flex-direction: column;
+        align-items: flex-start;
+        /* sol küncə hizala */
+        padding-left: 20px;
+        /* bir az boşluq */
         height: auto;
+
     }
 
-    .top_contexts,
-    .bottom {
-        flex-direction: column;
-        align-items: center;
+    .logo {
+       width: 100%;
+    display: flex;
+    flex-direction: row; /* word bubble-ın üstünə düşsün */
+    align-items: flex-start; /* hamısı sola */
+    position: relative;
+    margin-top: 10px;
+    }
+     .bubble{
+        width: 10%;
+     }
+
+    .word {
+        position: absolute;
+        width: 20%;
+        bottom: 1rem;
+        left: 1rem;
+    }
+
+    .check {
+         position: absolute;
+        top: 0.6rem;
+        left: 7.5rem;
+    }
+
+
+    .nav ul li a {
+        font-size: 18px;
+    }
+
+    .section_main {
+        width: 90%;
+    }
+
+    .section_main h2 {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .upload-box {
+        width: 90%;
+    }
+
+    .upload-box h3 {
+        font-size: 20px;
+    }
+
+    .scan-btn {
+        font-size: 16px;
+    }
+
+    .about p,
+    .contact p {
+        font-size: 16px;
+    }
+
+    .bottom_right p {
+        font-size: 18px;
     }
 
     .middle input {
         width: 80%;
-        margin-left: 10%;
-        position: relative;
-    }
-
-    .send {
-        margin-left: 0;
-        margin-top: 10px;
+        margin: 0 auto;
     }
 }
 
-/* Mobil (480px-dən aşağı) */
-@media (max-width: 480px) {
-    .section_main h2 {
-        font-size: 32px;
+/* ✅ Kiçik telefonlar üçün (320px və aşağı) */
+@media (max-width: 360px) {
+     body {
+        overflow-x: hidden;
     }
 
-    .upload-box h3,
-    .upload-label,
-    .scan-btn {
-        font-size: 16px;
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        /* sol küncə hizala */
+        padding-left: 20px;
+        /* bir az boşluq */
+        height: auto;
+
     }
+
+    .logo {
+       width: 100%;
+    display: flex;
+    flex-direction: row; /* word bubble-ın üstünə düşsün */
+    align-items: flex-start; /* hamısı sola */
+    position: relative;
+    margin-top: 10px;
+    }
+     .bubble{
+        width: 10%;
+     }
+
+    .word {
+        position: absolute;
+        width: 20%;
+        bottom: 0.6rem;
+        left: 0.6rem;
+    }
+
+    .check {
+         position: absolute;
+        top: 0.6rem;
+        left: 5.4rem;
+        width: 20px;
+    }
+
 
     .nav ul li a {
         font-size: 16px;
     }
 
-    .sign_log a,
-    .sign_log button {
-        font-size: 16px;
-        padding: 8px 20px;
+    .section_main {
+        width: 95%;
+        border-radius: 15px;
     }
 
-    .bottom_left,
-    .bottom_right {
-        flex-direction: column;
-        margin-left: 0;
-        margin-top: 20px;
-        width: 90%;
-        align-items: center;
+    .section_main h2 {
+        font-size: 22px;
+    }
+
+    .upload-box {
+        width: 95%;
+        padding: 5px;
+    }
+
+    .upload-label {
+        font-size: 14px;
+    }
+
+    .scan-btn {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .about h3,
+    .contact h3,
+    .faq a,
+    .help a {
+        font-size: 16px;
     }
 
     .bottom_right p {
-        margin-left: 0;
-        font-size: 18px;
+        font-size: 16px;
     }
 }

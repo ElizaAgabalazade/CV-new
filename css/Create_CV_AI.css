@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 body {
@@ -121,6 +121,8 @@ section {
     font-size: 20px;
     text-align: center;
     color: #6E666F;
+    overflow-y: hidden;
+
 
 
 }
@@ -140,6 +142,7 @@ section {
     cursor: pointer;
     transition: 0.3s;
 
+    overflow-y: hidden;
 }
 
 .section1 button.active {
@@ -231,3 +234,225 @@ section {
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
 }
+/* --- RESPONSIVE DESIGN --- */
+
+/* ✅ Planşetlər (max-width: 1024px) */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .logo {
+    width: 50%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .nav {
+    width: 80%;
+  }
+
+  .nav ul {
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+
+  .nav ul li a {
+    font-size: 22px;
+  }
+
+  .sign_log {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .section1 {
+    width: 100%;
+    margin-left: 0;
+    gap: 20px;
+  }
+
+  .design,
+  .layout_type,
+  .header,
+  .skill,
+  .language {
+    width: 30%;
+  }
+
+  .section2 {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .section2 textarea {
+    margin-left: 0;
+  }
+
+  .section3 {
+    width: 80%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .generate {
+    width: 70%;
+    margin-left: 0;
+    font-size: 26px;
+  }
+
+  .btn_download {
+    width: 40%;
+    font-size: 26px;
+  }
+}
+
+/* ✅ Kiçik planşetlər və böyük telefonlar (max-width: 768px) */
+@media (max-width: 768px) {
+  .nav ul li a {
+    font-size: 18px;
+  }
+
+  .section1 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .design,
+  .layout_type,
+  .header,
+  .skill,
+  .language {
+    width: 70%;
+  }
+
+  .section2,
+  .section3 {
+    width: 90%;
+  }
+
+  .section2 textarea {
+    font-size: 16px;
+  }
+
+  .generate,
+  .btn_download {
+    width: 80%;
+    font-size: 24px;
+    margin-left: 0;
+  }
+}
+
+/* ✅ Telefonlar (max-width: 480px) */
+  header {
+    flex-direction: column;
+    height: auto;
+    align-items: flex-start;
+    padding-left: 10px;
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* sola düzlənir */
+    margin: 10px 0;
+    position: relative;
+  }
+
+  .logo img {
+    position: static; /* əvvəlki absolute-ları sıfırlayırıq */
+  }
+  .bubble {
+    width: 40px; /* ölçüləri azaldılsın */
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 8px;
+  }
+   .word {
+    width: auto;
+    height: 20px;
+    margin: 0;
+  }
+
+  .check {
+    width: 18px;
+    height: 18px;
+    margin-left: 6px;
+  }
+  .nav {
+    width: 100%;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .nav ul li a {
+    font-size: 18px;
+  }
+
+  .sign_log {
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .section1 {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .design,
+  .layout_type,
+  .header,
+  .skill,
+  .language {
+    width: 80%;
+  }
+
+  .section2,
+  .section3 {
+    width: 90%;
+    margin-left: 0;
+    height: auto;
+  }
+
+  .section3 {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .section3 img {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .generate,
+  .btn_download {
+    width: 90%;
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-left: 0;
+  }
+

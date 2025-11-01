@@ -259,3 +259,293 @@ section {
     text-decoration: none;
     color: #fff;
 }
+/* ===================== 1024px (Planşetlər - Horizontal) ===================== */
+@media (max-width: 1024px) {
+  section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .section_left {
+    width: 100%;
+    height: 50vh;
+    text-align: center;
+  }
+
+  .section_left h1 {
+    font-size: 48px;
+    margin: 100px auto 20px auto;
+  }
+
+  .section_left p {
+    font-size: 24px;
+    margin: 40px auto;
+  }
+
+  .btn {
+    margin: 20px auto;
+    display: block;
+    width: 200px;
+    font-size: 18px;
+  }
+
+  .section_right {
+    width: 100%;
+    height: auto;
+    margin: 40px auto;
+    align-items: center;
+  }
+
+  .border-wrapper {
+    width: 80%;
+  }
+
+  .section_right_2 {
+    width: 80%;
+  }
+
+  .section_right_3 button {
+    padding: 15px 60px;
+  }
+
+  .actions {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+  }
+}
+
+/* ===================== 768px (Planşetlər və böyük telefonlar) ===================== */
+@media (max-width: 768px) {
+  body {
+    overflow-y: auto;
+  }
+
+  section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .section_left {
+    width: 100%;
+    height: 45vh;
+    text-align: center;
+  }
+
+  .section_left h1 {
+    font-size: 42px;
+    margin: 80px auto 10px auto;
+  }
+
+  .section_left p {
+    font-size: 20px;
+    margin: 20px auto;
+  }
+
+  .btn {
+    font-size: 16px;
+    width: 160px;
+    margin: 20px auto;
+  }
+
+  .section_right {
+    width: 100%;
+    height: auto;
+    margin: 30px auto;
+    align-items: center;
+  }
+
+  .border-wrapper {
+    width: 90%;
+  }
+
+  .inner-box {
+    font-size: 18px;
+  }
+
+  .section_right_2 {
+    width: 90%;
+  }
+
+  .section_right_2 input {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .section_right_3 {
+    font-size: 14px;
+  }
+
+  .section_right_3 button {
+    width: 80%;
+    font-size: 18px;
+    padding: 15px 40px;
+    margin: 30px auto;
+  }
+
+  .log_in {
+    width: 80%;
+    font-size: 18px;
+    margin: 20px auto;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .back,
+  .next {
+    width: 60%;
+    margin: 0;
+    justify-content: center;
+  }
+
+  .back button,
+  .next button {
+    width: 120px;
+    font-size: 18px;
+  }
+}
+
+/* ===================== 480px (Telefonlar) ===================== */
+@media (max-width: 480px) {
+  body {
+    overflow-y: auto;
+  }
+
+  section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .section_left {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  .section_left h1 {
+    font-size: 34px;
+    margin: 20px auto;
+  }
+
+  .section_left p {
+    font-size: 18px;
+    margin: 10px auto;
+  }
+
+  .btn {
+    width: 140px;
+    height: 40px;
+    font-size: 15px;
+    margin: 15px auto;
+  }
+
+  .section_right {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 10px;
+    align-items: center;
+  }
+
+  .border-wrapper {
+    width: 95%;
+  }
+
+  .inner-box {
+    font-size: 16px;
+  }
+
+  .inner-box img {
+    width: 60px;
+    top: -5px;
+    left: -5px;
+  }
+
+  .section_right_2 {
+    width: 95%;
+  }
+
+  .section_right_2 input {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 10px;
+  }
+
+  .section_right_3 {
+    font-size: 13px;
+  }
+
+  .section_right_3 button {
+    width: 90%;
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+
+  .log_in {
+    width: 100%;
+    font-size: 16px;
+    margin: 20px auto;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .back,
+  .next {
+    width: 70%;
+    justify-content: center;
+  }
+
+  .back button,
+  .next button {
+    width: 100px;
+    height: 35px;
+    font-size: 16px;
+  }
+}
+
+/* ===================== 320px və aşağı (Kiçik telefonlar) ===================== */
+@media (max-width: 320px) {
+  .section_left h1 {
+    font-size: 28px;
+  }
+
+  .section_left p {
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 120px;
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .section_right_2 input {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .section_right_3 button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .log_in {
+    font-size: 14px;
+  }
+
+  .back button,
+  .next button {
+    width: 80px;
+    font-size: 14px;
+  }
+}

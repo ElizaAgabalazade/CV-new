@@ -60,3 +60,73 @@ body {
 .go_home a:hover {
     background: #0056b3;
 }
+/* Responsivlik üçün əlavə */
+@media (max-width: 1024px) {
+  .main {
+    width: 400px;
+    margin: 60px;
+    height: auto;
+    padding: 25px;
+  }
+
+  .main h1 {
+    font-size: 24px;
+  }
+
+  .main p {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .main {
+    width: 90%;
+    margin: 40px auto;
+    height: auto;
+    padding: 20px;
+  }
+
+  .main h1 {
+    font-size: 22px;
+  }
+
+  .main p {
+    font-size: 14px;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .go_home a {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    width: 100%;
+    margin: 20px;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .main h1 {
+    font-size: 20px;
+  }
+
+  .main p {
+    font-size: 13px;
+    margin-top: 30px;
+  }
+
+  .go_home a {
+    width: 100%;
+    display: block;
+    padding: 12px;
+    font-size: 15px;
+  }
+}

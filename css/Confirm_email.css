@@ -81,3 +81,153 @@ body {
     margin: 0px auto;
 
 }
+/* ========================= */
+/* RESPONSIVE DESIGN START */
+/* ========================= */
+
+/* ≤1024px — Planşetlər üçün */
+@media (max-width: 1024px) {
+    .main {
+        width: 60%;
+        height: auto;
+        margin-left: 20%;
+        margin-top: 15%;
+        padding: 30px;
+    }
+
+    .texts h1 {
+        font-size: 28px;
+    }
+
+    .texts span {
+        font-size: 15px;
+    }
+
+    .input_part input {
+        width: 80%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .confirm a {
+        font-size: 30px;
+        padding: 10px;
+    }
+}
+
+/* ≤768px — Böyük telefonlar və vertikal planşetlər üçün */
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .main {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 20%;
+        padding: 25px;
+        height: auto;
+    }
+
+    .envelop {
+        width: 50px;
+        font-size: 26px;
+    }
+
+    .texts h1 {
+        font-size: 26px;
+    }
+
+    .texts span {
+        font-size: 14px;
+    }
+
+    .input_part input {
+        width: 85%;
+        font-size: 15px;
+        padding: 8px;
+    }
+
+    .confirm {
+        margin-top: 50px;
+    }
+
+    .confirm a {
+        font-size: 26px;
+        padding: 10px;
+    }
+}
+
+/* ≤480px — Mobil cihazlar üçün */
+@media (max-width: 480px) {
+    .main {
+        width: 90%;
+        margin: 20% auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    .envelop {
+        width: 45px;
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .texts h1 {
+        font-size: 22px;
+    }
+
+    .texts span {
+        font-size: 13px;
+        display: block;
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+
+    .input_part input {
+        width: 90%;
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .confirm {
+        margin-top: 40px;
+    }
+
+    .confirm a {
+        font-size: 22px;
+        padding: 10px;
+    }
+}
+
+/* ≤320px — Kiçik ekranlı telefonlar üçün */
+@media (max-width: 320px) {
+    .main {
+        width: 95%;
+        margin: 25% auto;
+        padding: 15px;
+    }
+
+    .texts h1 {
+        font-size: 20px;
+    }
+
+    .texts span {
+        font-size: 12px;
+    }
+
+    .input_part input {
+        width: 95%;
+        font-size: 13px;
+        padding: 6px;
+    }
+
+    .confirm a {
+        font-size: 18px;
+        padding: 8px;
+    }
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN END */
+/* ========================= */
