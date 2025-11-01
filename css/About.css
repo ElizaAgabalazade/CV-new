@@ -73,7 +73,80 @@ section{
     font-weight: 700;
 }
 
+.section_right{
+    width: 45vw;
+}
 /* =============================== */
+/* 📱 Telefonlar üçün (max-width: 480px) */
+@media (max-width: 480px) {
+
+  body {
+    width: 100%;
+    height: auto;
+  }
+
+  header {
+    height: auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  header a {
+    font-size: 20px;
+    display: inline-block;
+  }
+
+  header h2 {
+    position: static;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+
+  header .arrow {
+    position: static;
+    display: block;
+    margin: 5px auto;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .opening {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  .section_left,
+  .section_right {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .section_left {
+    height: auto;
+    margin-left: 0;
+  }
+
+  .section_left p {
+    width: 95%;
+    font-size: 14px;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  .section_left span {
+    font-size: 15px;
+  }
+
+  .section_right {
+    height: auto;
+  }
+
+}
+
 /* 📱 Telefonlar üçün (max 768px) */
 /* =============================== */
 @media (max-width: 768px) {
@@ -173,7 +246,3 @@ section{
 
 
 
-
-.section_right{
-    width: 45vw;
-}

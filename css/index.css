@@ -383,621 +383,293 @@ footer {
 
 }
 
-/* 🔹 Kiçik noutbuklar üçün (1025px - 1366px) */
-@media (min-width: 1025px) and (max-width: 1366px) {
- * {
-    flex-wrap: wrap;
+
+/* 📱 1. Kiçik telefonlar üçün (max-width: 480px) */
+@media (max-width: 480px) {
+
+  body {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
   }
-      body {
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: column;
-    }
 
-    header {
-        display: flex;
-        width: 100vw;
-        flex-direction: row;
-        align-items: flex-start;
-        /* sol küncə hizala */
-        padding-left: 20px;
-        /* bir az boşluq */
-        height: auto;
+  header {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
 
-    }
+  .logo {
+    width: 60%;
+    margin: 10px auto;
+    text-align: center;
+  }
 
-    .logo {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        /* word bubble-ın üstünə düşsün */
-        align-items: flex-start;
-        /* hamısı sola */
-        position: relative;
-        margin-top: 10px;
-    }
+  .word, .check {
+    position: static;
+    margin: 5px auto;
+  }
 
-    .bubble {
-        width: 10%;
-    }
+  .nav {
+    width: 100%;
+    text-align: center;
+  }
 
-    .word {
-        position: absolute;
-        width: 20%;
-        bottom: 2rem;
-        left: 2rem;
-    }
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 0;
+    gap: 10px;
+  }
 
-    .check {
-        position: absolute;
-        top: 2.6rem;
-        left: 15rem;
-    }
+  .nav ul li a {
+    font-size: 18px;
+  }
 
-.nav {
-    display: flex;
-        width: 40vw;
-        margin: 5px auto;
-      
-    }
+  .sign_log {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+  }
 
-    .nav ul {
-        align-items: center;
-        margin: 10px 0;
-        gap: 5px;
-          font-size: 40px;
-    }
-
-    .nav ul li a {
-        font-size: 22px;
-    } 
-
- .sign_log {
-        width: 50vw;
-        margin: 10px 0;
-    } 
-
-    .sign_log a {
-        font-size: 22px;
-    }
-
-    .sign_log button {
-        padding: 8px 25px;
-    } 
+  .sign_log a,
+  .sign_log button {
+    font-size: 18px;
+    margin: 8px 0;
+    padding: 8px 25px;
+  }
 
   section {
-    height: 60vh;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10%;
+    height: auto;
+    padding: 20px 0;
   }
 
   .section_main {
-    width: 55%;
-    height: 65vh;
-    margin-top: 10%;
-    margin-bottom: 10%;
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px 10px;
+  }
+
+  .section_main h2 {
+    font-size: 24px;
+  }
+
+  .section_main a {
+    font-size: 18px;
+    padding: 10px 30px;
+  }
+
+  /* Bubble-lar gizlənsin */
+  .bubble3, .bubble4, .bubble5, .bubble6, .bubble7 {
+    display: none;
+  }
+
+  footer {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .top_contexts {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about, .contact, .faq, .help {
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+
+  .middle {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .middle input {
+    width: 80%;
+    position: static;
+    margin: 10px 0;
+  }
+
+  .send {
+    margin-left: 0;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+.bottom_left{
+    width: 10%;
+}
+  .bottom_left, .bottom_right {
+    margin: 10px auto;
+    flex-direction: column;
+  }
+
+  .bottom_right p {
+    font-size: 18px;
+  }
+}
+
+/* 📲 2. Planşetlər üçün (max-width: 768px) */
+@media (max-width: 768px) {
+
+  header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .logo {
+    width: 40%;
+    margin: 10px;
+  }
+
+  .nav {
+    width: 100%;
+  }
+
+  .nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav ul li a {
+    font-size: 20px;
+  }
+
+  .sign_log {
+    width: 100%;
+    justify-content: center;
+  }
+
+  section {
+    height: auto;
+  }
+
+  .section_main {
+    width: 70%;
+    margin: 10% auto;
+  }
+
+  .section_main h2 {
+    font-size: 32px;
+  }
+
+  .section_main a {
+    font-size: 20px;
+    padding: 12px 50px;
+  }
+
+  .bubble3, .bubble4, .bubble5, .bubble6, .bubble7 {
+    display: none;
+  }
+
+footer {
+  height: auto;
+  padding: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top_contexts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  row-gap: 5px;
+  column-gap: 0; /* gap + margin üst-üstə düşməsin */
+}
+
+.about, .contact, .faq, .help {
+  flex: 1 1 10%; /* hər biri 45% en alır, qalan 10% aralıq üçün */
+  max-width: 45%;
+  /* margin: 5px; */
+  box-sizing: border-box;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.middle input {
+  width: 70%;
+  margin-left: 3px;
+}
+
+.middle a {
+  margin-left: 100px;
+  text-align: center;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+
+}
+.bottom_left{
+    width: 9%;
+    margin:0 auto;
+
+}
+
+.bottom_right{
+    width: 60%;
+}
+.bottom_right p {
+  font-size: 20px;
+  margin-left: 20px;
+  
+}
+}
+
+/* 💻 3. Kiçik noutbuklar və böyük planşetlər üçün (max-width: 1024px) */
+@media (max-width: 1024px) {
+  header {
+    justify-content: space-around;
+  }
+
+  .nav ul li a {
+    font-size: 22px;
+  }
+
+  .section_main {
+    width: 60%;
   }
 
   .section_main h2 {
     font-size: 36px;
   }
 
-  .section_main a {
-    font-size: 24px;
-    padding: 15px 60px;
-  }
-
   footer {
     height: auto;
-   
-  }
-
-  .inside {
-    
-    height: 45vh;
   }
 
   .top_contexts {
-    display: flex;
-    justify-content: flex-start;
-    gap: 10px;
-    width: 100vw;
-
-  }
-
- 
-  .contact
-   {
-    width: 20%;
-    margin-top: 10px;
-  }
- .about,  
-.faq,
-  .help{
-      width: 10%;
-    margin-top: 10px;
-  }
-  .about h3,
-  .contact h3,
-  .faq a,
-  .help a {
-    font-size: 16px;
-    padding-bottom: 3px;
-  }
-
-  .about p,
-  .contact p {
-    font-size: 12px;
-  }
-
-  .middle {
-    margin-top: 20px;
-  }
-
-  .middle input {
-    width: 25%;
-    padding: 10px;
-  }
-
-  .send {
-    margin-left: 380px;
-  }
-
-  .bottom_left {
-    margin-left: 20%;
-    width: 25%;
-  }
-
-  .bottom_right {
-    margin-left: 0px;
-  }
-
-  .bottom_right p {
-    font-size: 20px;
-  }
-
-  /* Bəzək balonlarını bir az kiçildək */
-  /* .bubble3,
-  .bubble4,
-  .bubble5,
-  .bubble6,
-  .bubble7 {
-    transform: scale(0.90);
-  } */
-}
-
-
-/* ✅ Planşetlər üçün (768px və aşağı) */
-@media (max-width: 768px) {
-     * {
-    flex-wrap: wrap;
-  }
-    body {
-        overflow-x: hidden;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        /* sol küncə hizala */
-        padding-left: 20px;
-        /* bir az boşluq */
-        height: auto;
-
-    }
-
-    .logo {
-       width: 100%;
-    display: flex;
-    flex-direction: row; /* word bubble-ın üstünə düşsün */
-    align-items: flex-start; /* hamısı sola */
-    position: relative;
-    margin-top: 10px;
-    }
-
-    .word {
-        position: absolute;
-        bottom: 1.5rem;
-        left: 1.5rem;
-    }
-
-    .check {
-         position: absolute;
-        bottom: 2.5rem;
-        left: 9.5rem;
-    }
-
-    .nav {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-        margin: 10px 0;
-        gap: 10px;
-    }
-
-    .nav ul li a {
-        font-size: 22px;
-    }
-
-    .sign_log {
-        flex-direction: column;
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .sign_log a {
-        font-size: 22px;
-    }
-
-    .sign_log button {
-        padding: 8px 25px;
-    }
-
-    section {
-        height: auto;
-        
-    }
-
-    .section_main {
-        width: 80%;
-        margin-top: 10%;
-        height: auto;
-        padding: 20px 0;
-    }
-
-    .section_main h2 {
-        font-size: 34px;
-    }
-
-    .upload-box {
-        flex-direction: column;
-        width: 80%;
-        padding: 10px;
-    }
-
-    .upload-label {
-        font-size: 18px;
-        position: static;
-        margin-bottom: 10px;
-    }
-
-    .upload-box_right {
-        width: 100%;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    .scan-btn {
-        position: static;
-        font-size: 18px;
-        padding: 6px 12px;
-    }
-
- footer {
-    height: auto; /* sabit hündürlük vermə */
-    padding: 20px 0;
-  }
-
-  .inside {
-    height: auto; /* 50vh çoxdu, adaptiv et */
-    padding-bottom: 20px;
-  }
-
-  .top_contexts {
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
-  .about,
-  .contact,
-  .faq,
-  .help {
-    width: 90%;
-    margin: 5px 0;
-    text-align: center;
-  }
-
-  .about h3,
-  .contact h3,
-  .faq a,
-  .help a {
-    font-size: 16px; /* bir az kiçilt */
-  }
-
-  .about p,
-  .contact p,
-  .faq p,
-  .help p {
-    font-size: 14px;
-  }
-
-  .middle {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .middle input {
-    width: 80%;
-    margin-left: 0;
-    position: static;
-    padding: 10px;
-  }
-
-  .send {
-    margin-left: 0;
-    margin-top: 10px;
-    transform: scale(0.9); /* bir az kiçilt */
-  }
-
-  .hr {
-    margin-top: 20px;
-  }
-
-  .bottom {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .bottom_left,
-  .bottom_right {
-    margin: 5px 0;
-    width: 100%;
     justify-content: center;
   }
 
-  .bottom img {
-    width: 30px;
-    height: auto;
+  .about, .contact, .faq, .help {
+    margin: 15px;
+  }
+
+  .middle input {
+    width: 50%;
+  }
+  .middle a{
+    margin: 0 auto;
   }
 
   .bottom_right p {
-    font-size: 16px;
-    text-align: center;
+    font-size: 22px;
   }
 }
-
-
-/* === 📱 Kiçik telefonlar (max-width: 480px) === */
-@media (max-width: 480px) {
- * {
-    flex-wrap: wrap;
-  }
-    body {
-        overflow-x: hidden;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        /* sol küncə hizala */
-        padding-left: 20px;
-        /* bir az boşluq */
-        height: auto;
-
-    }
-
-    .logo {
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        /* word bubble-ın üstünə düşsün */
-        align-items: flex-start;
-        /* hamısı sola */
-        position: relative;
-        margin-top: 10px;
-    }
-
-    .bubble {
-        width: 10%;
-    }
-
-    .word {
-        position: absolute;
-        width: 20%;
-        bottom: 1rem;
-        left: 1rem;
-    }
-
-    .check {
-        position: absolute;
-        top: 0.6rem;
-        left: 7.5rem;
-    }
-
-
-
-    .nav {
-        width: 100%;
-        margin-top: 15px;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin: 0;
-        padding: 0;
-    }
-
-    .nav ul li a {
-        font-size: 18px;
-    }
-
-    .sign_log {
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .sign_log a,
-    .sign_log button {
-        font-size: 16px;
-        margin: 5px 0;
-    }
-
-    /* === SECTION === */
-       .section_main {
-        width: 90%;
-    }
-
-    .section_main h2 {
-        font-size: 26px;
-        text-align: center;
-    }
-     .section_main a{
-        width: 80%;
-        font-size: 20px;
-     }
-    .upload-box {
-        width: 90%;
-    }
-
-    .upload-box h3 {
-        font-size: 20px;
-    }
-
-    .scan-btn {
-        font-size: 16px;
-    }
-
-    .about p,
-    .contact p {
-        font-size: 16px;
-    }
-
-    .bottom_right p {
-        font-size: 18px;
-    }
-
-    .middle input {
-        width: 80%;
-        margin: 0 auto;
-    }
-   
-
-    /* === FOOTER === */
-    footer {
-        height: auto;
-        padding: 10px 0;
-    }
-
-    .top_contexts {
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-    }
-
-    .about,
-    .contact,
-    .faq,
-    .help {
-        width: 90%;
-        margin: 4px auto;
-        text-align: center;
-    }
-
-    .about h3,
-    .contact h3,
-    .faq a,
-    .help a {
-        font-size: 14px;
-    }
-
-    .about p,
-    .contact p {
-        font-size: 12px;
-        line-height: 1.3;
-    }
-
-    .middle {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 6px;
-        width: 100%;
-    }
-
-    .middle input {
-        width: 80%;
-        margin: 4px 0;
-        padding: 8px;
-        font-size: 12px;
-        position: static;
-        border-radius: 10px;
-    }
-
-    .send {
-        margin: 5px 0 0 0;
-        width: 50px;
-        height: 25px;
-        transform: scale(0.8);
-    }
-
-    .hr {
-        width: 80%;
-        margin: 10px auto;
-        height: 1px;
-        background-color: #fff;
-        border: none;
-    }
-
-    .bottom {
-        display: flex;
-        width: 100vw;
-        height: 5vh;
-        padding-bottom: 5px;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 4px;
-    }
-
-    .bottom_left {
-        width: 20%;
-
-
-    }
-
-    .bottom_left img {
-        width: 30%;
-    }
-
-    .bottom_right {
-        width: 80%;
-        margin-left: 40px;
-           gap: 1rem;
-    }
-    .bottom_left,
-    .bottom_right {
-        margin-left: 0;
-        margin-top: 3px;
-        width: auto;
-    }
-
-    .bottom img {
-        max-width: 25px;
-    }
-
-    .bottom_right p {
-        font-size: 12px;
-        margin-left: 0;
-    }
-
-    .bubble3,
-    .bubble4,
-    .bubble5,
-    .bubble6,
-    .bubble7 {
-        display: none;
-    }
-
- }
-
