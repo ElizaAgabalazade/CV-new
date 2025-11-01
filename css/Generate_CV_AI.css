@@ -227,3 +227,301 @@ section {
     color: #fff;
     text-shadow: 0 4px 4px rgba(0,0,0, 0.25);
 }
+
+
+
+/* 📱 Telefonlar üçün */
+@media (max-width: 600px) {
+* {
+    flex-wrap: wrap;
+  }
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        /* sol küncə hizala */
+        padding-left: 20px;
+        /* bir az boşluq */
+        height: auto;
+
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        /* word bubble-ın üstünə düşsün */
+        align-items: flex-start;
+        /* hamısı sola */
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .bubble {
+        width: 10%;
+    }
+
+    .word {
+        position: absolute;
+        width: 20%;
+        bottom: 1rem;
+        left: 1rem;
+    }
+
+    .check {
+        position: absolute;
+        top: 1.2rem;
+        left: 8.5rem;
+    }
+
+
+
+    .nav {
+        width: 100%;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .nav ul li a {
+        font-size: 20px;
+    }
+
+    .sign_log {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding-bottom: 20px;
+    }
+
+    .section1 {
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        gap: 15px;
+    }
+
+    .name,
+    .email,
+    .phone,
+    .address,
+    .professional_experience,
+    .education,
+    .courses,
+    .certification {
+        width: 80%;
+        font-size: 16px;
+    }
+
+    .section2 {
+        width: 90%;
+        margin: 20px auto;
+        height: auto;
+    }
+
+    .section2 textarea {
+        width: 100%;
+        margin-left: 0;
+        height: 200px;
+        font-size: 16px;
+    }
+
+    .section3 {
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .section3 img {
+        width: 50%;
+        margin: 10px 0;
+    }
+
+    .links {
+        justify-content: center;
+        margin-left: 0;
+        gap: 10px;
+    }
+
+    .links a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .generate {
+        width: 80%;
+        font-size: 20px;
+        margin: 20px auto;
+    }
+}
+
+/* 💻 Planşet və kiçik noutbuklar üçün */
+@media (min-width: 601px) and (max-width: 1024px) {
+* {
+    flex-wrap: wrap;
+  }
+    body {
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        /* sol küncə hizala */
+        padding-left: 20px;
+        /* bir az boşluq */
+        height: auto;
+
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        /* word bubble-ın üstünə düşsün */
+        align-items: flex-start;
+        /* hamısı sola */
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .bubble {
+        width: 10%;
+    }
+
+    .word {
+        position: absolute;
+        width: 20%;
+        bottom: 1rem;
+        left: 1rem;
+    }
+
+    .check {
+        position: absolute;
+        top: 1.2rem;
+        left: 8.5rem;
+    }
+
+
+
+    .nav {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .nav ul {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .nav ul li a {
+        font-size: 22px;
+    }
+
+    .sign_log {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .section1 {
+        width: 90%;
+        gap: 20px;
+    }
+
+    .name,
+    .email,
+    .phone,
+    .address,
+    .professional_experience,
+    .education,
+    .courses,
+    .certification {
+        width: 40%;
+        font-size: 18px;
+    }
+
+    .section2 {
+        width: 90%;
+        margin-left: 0;
+        height: auto;
+    }
+
+    .section2 textarea {
+        margin-left: 0;
+        height: 250px;
+        font-size: 18px;
+    }
+
+    .section3 {
+        width: 80%;
+        margin-left: 0;
+        align-items: center;
+    }
+
+    .section3 img {
+        width: 30%;
+    }
+
+    .links {
+        justify-content: center;
+        margin-left: 0;
+        gap: 20px;
+    }
+
+    .links a {
+        font-size: 18px;
+    }
+
+    .generate {
+        width: 70%;
+        font-size: 24px;
+        margin: 20px auto;
+    }
+}
+
+/* 🖥️ Orta ölçülü ekranlar üçün */
+@media (min-width: 1025px) and (max-width: 1366px) {
+*{
+  flex-wrap: wrap;
+}
+    .name,
+    .email,
+    .phone,
+    .address,
+    .professional_experience,
+    .education,
+    .courses,
+    .certification {
+        width: 25%;
+        font-size: 18px;
+    }
+
+    .section2 textarea {
+        margin-left: 50px;
+        height: 300px;
+    }
+
+    .generate {
+        width: 50%;
+        font-size: 26px;
+    }
+}
