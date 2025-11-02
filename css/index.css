@@ -383,33 +383,232 @@ footer {
 
 }
 
+/* 💻 3. Kiçik noutbuklar və böyük planşetlər üçün (max-width: 1024px) */
+@media (max-width: 1024px) {
+  header {
+    justify-content: space-around;
+  }
 
+  .nav ul li a {
+    font-size: 22px;
+  }
+
+  .section_main {
+    width: 60%;
+  }
+
+  .section_main h2 {
+    font-size: 36px;
+  }
+
+  footer {
+    height: auto;
+  }
+
+  .top_contexts {
+    justify-content: center;
+  }
+
+  .about, .contact, .faq, .help {
+    margin: 15px;
+  }
+
+  .middle input {
+    width: 50%;
+  }
+  .middle a{
+    margin: 0 auto;
+  }
+
+  .bottom_right p {
+    font-size: 22px;
+  }
+}
+/* 📲 2. Planşetlər üçün (max-width: 768px) */
+@media (max-width: 768px) {
+body {
+        overflow-x: hidden;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        /* sol küncə hizala */
+        padding-left: 20px;
+        /* bir az boşluq */
+        height: auto;
+
+    }
+
+    .logo {
+       width: 100%;
+    display: flex;
+    flex-direction: row; /* word bubble-ın üstünə düşsün */
+    align-items: flex-start; /* hamısı sola */
+    position: relative;
+    margin-top: 10px;
+    }
+
+    .word {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .check {
+         position: absolute;
+        bottom: 2.5rem;
+        left: 9.5rem;
+    }
+  .nav {
+    width: 100%;
+  
+  }
+
+  .nav ul {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .nav ul li a {
+    font-size: 20px;
+  }
+
+  .sign_log {
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  section {
+    height: auto;
+  }
+
+  .section_main {
+    width: 70%;
+    margin: 10% auto;
+  }
+
+  .section_main h2 {
+    font-size: 32px;
+  }
+
+  .section_main a {
+    font-size: 20px;
+    padding: 12px 50px;
+  }
+
+  .bubble3, .bubble4, .bubble5, .bubble6, .bubble7 {
+    display: none;
+  }
+
+footer {
+  height: auto;
+  padding: 20px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.top_contexts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  row-gap: 5px;
+  column-gap: 0; /* gap + margin üst-üstə düşməsin */
+}
+
+.about, .contact, .faq, .help {
+  flex: 1 1 10%; /* hər biri 45% en alır, qalan 10% aralıq üçün */
+  max-width: 45%;
+  /* margin: 5px; */
+  box-sizing: border-box;
+}
+
+.middle {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.middle input {
+  width: 70%;
+  margin-left: 5px;
+}
+
+.middle a {
+  margin-left: 100px;
+  text-align: center;
+}
+.send{
+  margin-left: 21rem;
+}
+.bottom {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-around;
+
+}
+.bottom_left{
+    width: 20%;
+    margin:0 auto;
+
+}
+
+.bottom_right{
+    width: 60%;
+}
+.bottom_right p {
+  font-size: 18px;
+  margin-left: 20px;
+  
+}
+}
 /* 📱 1. Kiçik telefonlar üçün (max-width: 480px) */
 @media (max-width: 480px) {
 
-  body {
-    width: 100%;
-    height: auto;
-    overflow-x: hidden;
-  }
+body {
+        overflow-x: hidden;
+    }
 
-  header {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        /* sol küncə hizala */
+        padding-left: 20px;
+        /* bir az boşluq */
+        height: auto;
 
-  .logo {
-    width: 60%;
-    margin: 10px auto;
-    text-align: center;
-  }
+    }
 
-  .word, .check {
-    position: static;
-    margin: 5px auto;
-  }
+    .logo {
+       width: 100%;
+    display: flex;
+    flex-direction: row; /* word bubble-ın üstünə düşsün */
+    align-items: flex-start; /* hamısı sola */
+    position: relative;
+    margin-top: 10px;
+    }
 
+    .word {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .check {
+         position: absolute;
+        bottom: 2.5rem;
+        left: 9.5rem;
+    }
   .nav {
     width: 100%;
     text-align: center;
@@ -471,33 +670,38 @@ footer {
   }
 
   .top_contexts {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
   .about, .contact, .faq, .help {
     width: 90%;
-    margin: 10px auto;
+    margin: 0 auto;
     text-align: center;
   }
-
+.contact{
+  margin-top: 20px;
+}
+.faq, .help{
+  margin-bottom: 50px;
+}
   .middle {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
   .middle input {
-    width: 80%;
-    position: static;
-    margin: 10px 0;
+    margin: 5px ;
   }
 
   .send {
-    margin-left: 0;
+    margin-left:16rem;
+
+
   }
 
   .bottom {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     text-align: center;
   }
@@ -505,194 +709,14 @@ footer {
     width: 10%;
 }
   .bottom_left, .bottom_right {
-    margin: 10px auto;
-    flex-direction: column;
-  }
-
-  .bottom_right p {
-    font-size: 18px;
-  }
-}
-
-/* 📲 2. Planşetlər üçün (max-width: 768px) */
-@media (max-width: 768px) {
-body {
-        overflow-x: hidden;
-    }
-
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        /* sol küncə hizala */
-        padding-left: 20px;
-        /* bir az boşluq */
-        height: auto;
-
-    }
-
-    .logo {
-       width: 100%;
-    display: flex;
-    flex-direction: row; /* word bubble-ın üstünə düşsün */
-    align-items: flex-start; /* hamısı sola */
-    position: relative;
-    margin-top: 10px;
-    }
-
-    .word {
-        position: absolute;
-        bottom: 1.5rem;
-        left: 1.5rem;
-    }
-
-    .check {
-         position: absolute;
-        bottom: 2.5rem;
-        left: 9.5rem;
-    }
-  .nav {
-    width: 100%;
-  }
-
-  .nav ul {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .nav ul li a {
-    font-size: 20px;
-  }
-
-  .sign_log {
-    width: 100%;
-    justify-content: center;
-  }
-
-  section {
-    height: auto;
-  }
-
-  .section_main {
-    width: 70%;
-    margin: 10% auto;
-  }
-
-  .section_main h2 {
-    font-size: 32px;
-  }
-
-  .section_main a {
-    font-size: 20px;
-    padding: 12px 50px;
-  }
-
-  .bubble3, .bubble4, .bubble5, .bubble6, .bubble7 {
-    display: none;
-  }
-
-footer {
-  height: auto;
-  padding: 20px 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.top_contexts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  margin: 0 auto;
-  row-gap: 5px;
-  column-gap: 0; /* gap + margin üst-üstə düşməsin */
-}
-
-.about, .contact, .faq, .help {
-  flex: 1 1 10%; /* hər biri 45% en alır, qalan 10% aralıq üçün */
-  max-width: 45%;
-  /* margin: 5px; */
-  box-sizing: border-box;
-}
-
-.middle {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.middle input {
-  width: 70%;
-  margin-left: 3px;
-}
-
-.middle a {
-  margin-left: 100px;
-  text-align: center;
-}
-
-.bottom {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-around;
-
-}
-.bottom_left{
-    width: 9%;
     margin:0 auto;
-
-}
-
-.bottom_right{
-    width: 60%;
-}
-.bottom_right p {
-  font-size: 20px;
-  margin-left: 20px;
-  
-}
-}
-
-/* 💻 3. Kiçik noutbuklar və böyük planşetlər üçün (max-width: 1024px) */
-@media (max-width: 1024px) {
-  header {
-    justify-content: space-around;
-  }
-
-  .nav ul li a {
-    font-size: 22px;
-  }
-
-  .section_main {
-    width: 60%;
-  }
-
-  .section_main h2 {
-    font-size: 36px;
-  }
-
-  footer {
-    height: auto;
-  }
-
-  .top_contexts {
-    justify-content: center;
-  }
-
-  .about, .contact, .faq, .help {
-    margin: 15px;
-  }
-
-  .middle input {
-    width: 50%;
-  }
-  .middle a{
-    margin: 0 auto;
+    flex-direction: row;
   }
 
   .bottom_right p {
-    font-size: 22px;
+    font-size: 15px;
   }
 }
+
+
+

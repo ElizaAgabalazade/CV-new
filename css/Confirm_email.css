@@ -161,7 +161,7 @@ body {
 /* ≤480px — Mobil cihazlar üçün */
 @media (max-width: 480px) {
     .main {
-        width: 90%;
+        width: 80%;
         margin: 20% auto;
         height: auto;
         padding: 20px;
@@ -203,7 +203,7 @@ body {
 /* ≤320px — Kiçik ekranlı telefonlar üçün */
 @media (max-width: 320px) {
     .main {
-        width: 95%;
+        width: 80%;
         margin: 25% auto;
         padding: 15px;
     }

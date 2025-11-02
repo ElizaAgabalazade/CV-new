@@ -106,6 +106,38 @@ section {
 .faq-item.active .toggle-arrow {
   transform: rotate(180deg);
 }
+
+
+/* Planşetlər üçün (601px – 900px) */
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    header h1 {
+        font-size: 48px;
+    }
+
+    .search-box {
+        width: 85vw;
+    }
+
+    .search-box input {
+        font-size: 24px;
+        padding: 25px;
+    }
+
+    .faq-question h3 {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    .faq-question img {
+       
+        width: 15px;
+        height: 10px;
+    }
+
+    .questions {
+        width: 90%;
+    }
+}
 /* Mobil telefonlar üçün (max 600px) */
 @media screen and (max-width: 600px) {
     header h1 {
@@ -134,36 +166,5 @@ section {
 
     .questions {
         width: 95%;
-    }
-}
-
-/* Planşetlər üçün (601px – 900px) */
-@media screen and (min-width: 601px) and (max-width: 900px) {
-    header h1 {
-        font-size: 48px;
-    }
-
-    .search-box {
-        width: 85vw;
-    }
-
-    .search-box input {
-        font-size: 24px;
-        padding: 25px;
-    }
-
-    .faq-question h3 {
-        font-size: 24px;
-        padding: 10px;
-    }
-
-    .faq-question img {
-        top: 34%;
-        width: 15px;
-        height: 15px;
-    }
-
-    .questions {
-        width: 90%;
     }
 }

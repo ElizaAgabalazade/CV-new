@@ -94,7 +94,7 @@ section {
 }
 
 .section__right_2 input {
-    
+
     justify-content: space-around;
     align-items: center;
     margin-top: 10%;
@@ -108,7 +108,7 @@ section {
 }
 
 .resend {
-display: block;
+    display: block;
     text-align: center;
     margin-top: 10%;
     font-size: 16px;
@@ -149,7 +149,7 @@ display: block;
     display: flex;
     flex-direction: column;
     margin-top: 2%;
-    
+
 }
 
 .section_right_3 a {
@@ -158,10 +158,11 @@ display: block;
     margin-top: 15%;
     color: #6E666F;
 }
+
 .btn_r {
     display: block;
-    font-size: 20px
-    ;margin: 10px auto;
+    font-size: 20px;
+    margin: 10px auto;
     /* margin-top: 5px; */
     text-align: center;
     margin-left: 30%;
@@ -193,7 +194,7 @@ display: block;
 
 
 
-.back  button{
+.back button {
     width: 100px;
     background-color: #73AFF3;
     margin-left: 5%;
@@ -203,15 +204,16 @@ display: block;
     cursor: pointer;
     border: none;
     outline: none;
-  
-    
 
-    
+
+
+
 }
-.back button a{
-   font-size: 20px;
-   text-decoration: none;
-   color: #fff;
+
+.back button a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
 }
 
 
@@ -219,6 +221,8 @@ display: block;
 @media (max-width: 1024px) {
     section {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         height: auto;
     }
 
@@ -230,21 +234,21 @@ display: block;
 
     .section_left h1 {
         font-size: 48px;
-        margin: 15% auto 0;
-        text-align: center;
-        margin-left: 0;
+        margin: 0 auto;
+        margin-left:0 auto;
     }
 
     .section_left p {
         font-size: 24px;
         margin: 40px auto 0;
         text-align: center;
-        margin-left: 0;
+        margin-left: 0 auto;
     }
 
     .btn {
-        margin: 40px auto 0;
+        margin: 40px auto 10px;
         display: block;
+
     }
 
     .section__right_2 {
@@ -267,12 +271,23 @@ display: block;
 
 /* 📱 Mobil üçün (≤768px) */
 @media (max-width: 768px) {
+    .section_left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     .section_left h1 {
-        font-size: 36px;
+        font-size: 48px;
+        margin: 0;
+        margin-left: 0;
     }
 
     .section_left p {
         font-size: 20px;
+        margin: 0;
+
     }
 
     .btn,
@@ -283,17 +298,19 @@ display: block;
         font-size: 18px;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 20px;
     }
 
     .section__right_2 input {
-        width: 18%;
-        padding: 8px;
+        width: 10%;
+        padding: 10px;
     }
 
     .resend {
         font-size: 14px;
     }
 }
+/* @media (width:600px){} is ready */
 
 /* 📱 Kiçik mobil (≤480px) */
 @media (max-width: 480px) {

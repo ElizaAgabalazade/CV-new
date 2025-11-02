@@ -337,7 +337,7 @@ section {
   .section1,
   .section2,
   .section3 {
-    width: 80%;
+    width: 70%;
     margin: 15px auto;
     height: auto;
   }
@@ -361,8 +361,8 @@ section {
   }
 
   .card-wrapper {
-    width: 90%;
-    margin: 20px auto;
+    width: 95%;
+    margin: 20px 5px auto;
   }
 
   .card-number {
@@ -371,58 +371,95 @@ section {
   }
 }
 
-/* 📱 Kiçik telefonlar (≤480px) */
-@media (max-width: 480px) {
+
+@media (max-width: 600px){
+ section {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
 
   .section1,
   .section2,
   .section3 {
-    width: 95%;
-    margin: 10px auto;
+    width: 70%;
+    margin: 15px auto;
     height: auto;
   }
 
   .section1 h1,
+  .section2 label,
   .section3 h1,
-  .section3 h2 {
-    font-size: 16px;
+  .section3 h2,
+  .section3 h3 {
+    font-size: 18px;
   }
 
-  .section3 p {
-    font-size: 14px;
-    width: 90%;
-    margin: 10px auto;
-  }
-
-  .section3 ul {
-    font-size: 14px;
-    margin-left: 15px;
-  }
-
-  .pay-btn {
-    width: 90%;
-    padding: 12px;
-    font-size: 14px;
-  }
-
+  .section1 button,
+  .pay-btn,
+  .section3 button,
   .back button {
-    width: 80px;
-    height: 35px;
-    font-size: 14px;
+    width: 80%;
+    padding: 15px;
+    font-size: 16px;
+    margin: 20px auto;
+  }
+
+  .card-wrapper {
+    width: 95%;
+    margin: 20px 5px auto;
   }
 
   .card-number {
-    font-size: 18px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 15px;
   }
 
-  .inputs-row {
-    flex-direction: column;
-    gap: 10px;
-  }
 
-  .month,
-  .cvv {
-    width: 100%;
-  }
+
 }
+/* 📱 Kiçik telefonlar (≤480px) */
+@media (max-width: 480px) {
+
+  section {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .section1,
+  .section2,
+  .section3 {
+    width: 70%;
+    margin: 15px auto;
+    height: auto;
+  }
+
+  .section1 h1,
+  .section2 label,
+  .section3 h1,
+  .section3 h2,
+  .section3 h3 {
+    font-size: 18px;
+  }
+
+  .section1 button,
+  .pay-btn,
+  .section3 button,
+  .back button {
+    width: 80%;
+    padding: 15px;
+    font-size: 16px;
+    margin: 20px auto;
+  }
+
+  .card-wrapper {
+    width: 95%;
+    margin: 20px 5px auto;
+  }
+
+  .card-number {
+    font-size: 20px;
+    padding: 15px;
+  
+}}

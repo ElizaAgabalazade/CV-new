@@ -267,7 +267,7 @@ section {
 .back  button{
     width: 100px;
     display: block;
-    box-shadow: 0 0 15px 4px #5C17FC;
+    
     background-color: #73AFF3;
     margin-left: 10%;
     margin-top: 22%;
@@ -277,10 +277,10 @@ section {
     cursor: pointer;
     border: none;
     outline: none;
-  
     
-
-    
+}
+.back  button:hover{
+    box-shadow: 0 0 15px 4px #5C17FC;
 }
 .back button a{
    font-size: 20px;
@@ -289,88 +289,325 @@ section {
 
 }
 
-
 @media (max-width: 1024px) {
-    section {
-        flex-direction: column;
-        align-items: center;
+
+    body {
+        background-color: #D9D9D9;
     }
 
-    .section1,
-    .section2,
-    .section3 {
+    section {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    /* --- SECTION 1 --- */
+    .section1 {
+        width: 40%;
+        margin: 20px;
+        padding-bottom: 20px;
+    }
+
+    .section1 h1 {
+        font-size: 18px;
+        margin-top: 10%;
+        margin-bottom: 12%;
+    }
+
+    .section1 button {
         width: 80%;
-        /* genişliyi ekran ölçüsünə uyğunlaşdırır */
-        margin-top: 20px;
-        margin-bottom: 20px;
+        padding: 25px 30px;
+        margin: 15px auto 30px;
+    }
+
+    .section1 button a {
+        font-size: 18px;
+    }
+
+    /* --- SECTION 2 --- */
+    .section2 {
+        width: 45%;
+        height: auto;
+        padding-top: 50px;
+        margin: 20px;
     }
 
     .card-wrapper {
-        width: 90%;
-        /* card input daha elastik olsun */
-    }
-
-    .inputs-row {
-        flex-direction: column;
-        /* yan-yana input-lar alt-alta */
-        width: 90%;
+        width: 80%;
         margin: 10px auto;
-    }
-
-    .month,
-    .cvv {
-        width: 100%;
-        /* input bloklarını tam genişlikdə göstərir */
-        margin-bottom: 10px;
-    }
-
-    .section1 button,
-    .section3 button,
-    .pay-btn {
-        width: 90%;
-        /* button-lar ekran ölçüsünə uyğun */
-        padding: 12px 0;
-        font-size: 1rem;
-    }
-
-    .section3 p,
-    .section3 span,
-    .section3 ul {
-        width: 90%;
-        margin: 10px auto;
-        text-align: center;
-    }
-}
-
-@media (max-width: 600px) {
-
-    .section1 h1,
-    .section3 h2,
-    .section3 span,
-    .inputs-row h1 {
-        font-size: 1rem;
-        /* başlıqları kiçildir */
+        margin-left: 3rem;
     }
 
     .card-number {
-        font-size: 1.5rem;
-        /* input text daha kiçik */
-        padding: 8px;
+        font-size: 22px;
+        padding: 5px;
+    }
+
+    .inputs-row {
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .month label,
+    .cvv label {
+        font-size: 18px;
     }
 
     .inputs-row input {
-        font-size: 0.9rem;
+        font-size: 16px;
         padding: 8px 10px;
     }
 
     .pay-btn {
-        font-size: 0.9rem;
-        padding: 10px 0;
+        width: 70%;
+        font-size: 16px;
+        padding: 15px;
+        margin: 40px auto;
     }
 
-    .section1 button,
+    .pay-btn a {
+        font-size: 18px;
+    }
+
+    /* --- SECTION 3 --- */
+    .section3 {
+        width: 50%;
+        height: auto;
+        margin: 30px auto;
+        box-shadow: 0 0 60px 10px #73AFF3;
+    }
+
+    .basic h1 {
+        font-size: 22px;
+        margin-left: 20px;
+        margin-top: 8%;
+        padding: 8px 10px;
+    }
+
+    .section3 h2 {
+        font-size: 22px;
+    }
+
+    .section3 span {
+        font-size: 22px;
+    }
+
+    .section3 ul {
+        font-size: 16px;
+        margin-left: 25px;
+    }
+
+    .section3 p {
+        font-size: 18px;
+        width: 200px;
+        margin: 20px auto;
+    }
+
+    .section3 h3 {
+        font-size: 14px;
+        margin: 10px 30px;
+    }
+
     .section3 button {
-        font-size: 0.9rem;
-        padding: 10px 0;
+        width: 60%;
+        padding: 12px;
+        font-size: 18px;
+        margin: 20px auto 30px;
+        display: block;
+    }
+
+    .section3 button a {
+        font-size: 18px;
+    }
+
+    /* --- BACK BUTTON --- */
+    .back button {
+        width: 90px;
+        height: 35px;
+        margin: 20px auto;
+        margin-right: 56rem;
+        margin-bottom: 8rem;
+        display: block;
+        
+        border-radius: 25px;
+    }
+.back  button:hover{
+    box-shadow: 0 0 15px 4px #5C17FC;
+}
+    .back button a {
+        font-size: 16px;
     }
 }
+
+
+@media(max-width:768px){
+    .back button {
+        width: 90px;
+        height: 35px;
+        margin: 20px auto;
+        margin-right: 40rem;
+        margin-bottom: 8rem;
+        display: block;        
+        border-radius: 25px;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    body {
+        background-color: #E5E5E5;
+    }
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    /* --- SECTION 1 --- */
+    .section1 {
+        width: 90%;
+        margin: 20px auto;
+        height: auto;
+        padding: 20px;
+    }
+
+    .section1 h1 {
+        font-size: 18px;
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+    .section1 button {
+        width: 80%;
+        padding: 20px;
+        margin: 15px auto 25px;
+    }
+
+    .section1 button a {
+        font-size: 18px;
+    }
+
+    /* --- SECTION 2 --- */
+    .section2 {
+        width: 90%;
+        height: auto;
+        padding: 30px 10px;
+        margin: 30px auto;
+    }
+
+    .card-wrapper {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .card-number {
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .inputs-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 10px;
+    }
+
+    .month,
+    .cvv {
+        width: 80%;
+    }
+
+    .month label,
+    .cvv label {
+        font-size: 16px;
+    }
+
+    .inputs-row input {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .pay-btn {
+        width: 80%;
+        padding: 15px;
+        font-size: 16px;
+        margin: 40px auto;
+    }
+
+    .pay-btn a {
+        font-size: 18px;
+    }
+
+    /* --- SECTION 3 --- */
+    .section3 {
+        width: 90%;
+        height: auto;
+        margin: 30px auto;
+        box-shadow: 0 0 40px 10px #73AFF3;
+        padding-bottom: 30px;
+    }
+
+    .basic h1 {
+        font-size: 20px;
+        margin-left: 20px;
+        margin-top: 20px;
+        padding: 8px 10px;
+    }
+
+    .section3 h2 {
+        font-size: 22px;
+    }
+
+    .section3 span {
+        font-size: 22px;
+    }
+
+    .section3 ul {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+
+    .section3 p {
+        font-size: 18px;
+        width: 80%;
+        margin: 15px auto;
+    }
+
+    .section3 h3 {
+        font-size: 14px;
+        margin: 10px 20px;
+    }
+
+    .section3 button {
+        width: 70%;
+        padding: 12px;
+        font-size: 18px;
+        margin: 15px auto;
+        display: block;
+    }
+
+    .section3 button a {
+        font-size: 18px;
+    }
+
+    /* --- BACK BUTTON --- */
+  .back button {
+        width: 90px;
+        height: 35px;
+        margin: 20px auto;
+        margin-right: 30rem;
+        margin-bottom: 8rem;
+        display: block;        
+        border-radius: 25px;
+    }
+
+    .back button a {
+        font-size: 16px;
+    }
+}
+/* @media(max-width:600px){ } is alright */

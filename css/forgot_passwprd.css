@@ -166,7 +166,6 @@ section {
     font-size: 20px;
     margin-top: 2%;
     margin-left: 30%;
-    padding: 10px;
     width: 234px;
     height: 44px;
     border: 2px solid transparent;
@@ -208,74 +207,402 @@ section {
     text-decoration: none;
     color: #fff;
 }
-@media (max-width: 600px) {
+
+
+
+
+@media (max-width: 1024px) {
+
+    section {
+        flex-direction: row;
+        align-items: flex-start;
+        min-height: auto;
+        height: 100vh;
+    }
+
+    /* Sol tərəf */
+    .section_left {
+        width: 50%;
+        min-height: 100vh;
+        padding: 5%;
+    }
+
     .section_left h1 {
-        font-size: 2.2rem;
-        margin-left: 5%;
-        margin-top: 8%;
+        font-size: 48px;
+        margin-left: 80px;
+        margin-top: 25%;
     }
+
     .section_left p {
-        font-size: 1.2rem;
-        margin-left: 5%;
-        margin-top: 3%;
+        font-size: 24px;
+        margin-left: 60px;
+        margin-top: 80px;
     }
-    .btn_1, .btn, .btn_send, .btn_r {
-        width: 80%;
-        margin-left: 10%;
+
+    .btn_1,
+    .btn,
+    .btn_send {
+        width: 45%;
+        max-width: 220px;
+        height: 40px;
         font-size: 1rem;
-    }
-    .section__right_2 input {
-        width: 100%;
-        margin-left: 0;
-        font-size: 0.9rem;
-    }
-}
-@media (max-width: 768px){
- .section_left h1 {
-        font-size: 2.2rem;
-        margin-left: 5%;
         margin-top: 8%;
+        margin-left: 30%;
     }
-    .section_left p {
-        font-size: 1.2rem;
-        margin-left: 5%;
-        margin-top: 3%;
+
+    .sign {
+        font-size: 18px;
     }
-    .btn_1, .btn, .btn_send, .btn_r {
-        width: 80%;
-        margin-left: 10%;
-        font-size: 1rem;
-    }
-    .section__right_2 input {
-        width: 100%;
-        margin-left: 0;
-        font-size: 0.9rem;
-    }
-}
-@media(max-width:1024px){
-    .section_left{
+
+    /* Sağ tərəf */
+    .section_right {
+        width: 50%;
+        padding: 20px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
+
+    }
+
+    .top {
+        font-size: 20px;
+        margin-right: 20%;
+    }
+
+    .section__right_2 {
+        margin-right: 35%;
+    }
+
+    .section__right_2 p {
+        font-size: 22px;
+        margin-left: 0;
+        margin-top: 5%;
+    }
+
+    .section__right_2 input {
+        width: 80%;
+        margin-left: 10%;
+        padding: 12px;
+        font-size: 18px;
+    }
+
+    .btn_send {
+        width: 40%;
+        margin-left: 30%;
+        font-size: 18px;
+    }
+
+    .sign_in_link {
+        font-size: 14px;
+        margin-top: 6%;
+    }
+
+    /* Alt hissə */
+    .section_right_3 {
+        margin-top: 6%;
+    }
+
+    .section_right_3 p {
+        font-size: 16px;
+        margin-top: 5%;
+    }
+
+    .btn_r {
+        width: 200px;
+        height: 40px;
+        font-size: 18px;
+        margin-left: 25%;
+    }
+
+    .back button {
+        width: 90px;
+        height: 36px;
+        margin-left: 4%;
+        margin-top: 4%;
+        font-size: 16px;
+    }
+
+    .back button a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: auto;
+        height: auto;
+    }
+
+    /* SOL HİSSƏ */
+    .section_left {
+        width: 100%;
+        min-height: 60vh;
+        padding: 40px 20px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section_left h1 {
+        font-size: 40px;
+        margin: 0;
+    }
+
+    .section_left p {
+        font-size: 22px;
+        margin-top: 30px;
+        margin-left: 0;
+    }
+
+    .btn_1,
+    .btn,
+    .btn_send {
+        width: 50%;
+        max-width: 220px;
+        height: 42px;
+        font-size: 1rem;
+        margin: 40px auto 0;
+        display: block;
+    }
+
+    .sign {
+        font-size: 18px;
+    }
+
+    /* SAĞ HİSSƏ */
+    .section_right {
+        width: 100%;
+        min-height: 70vh;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
     }
+
+    .top {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .section__right_2 {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .section__right_2 p {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-right: 50%;
+    }
+
+    .section__right_2 input {
+        width: 80%;
+        padding: 12px;
+        margin: 25px 0;
+        border-radius: 12px;
+        font-size: 16px;
+    }
+
+    .btn_send {
+        width: 50%;
+        height: 42px;
+        font-size: 16px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .sign_in_link {
+        font-size: 14px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /* ALT HİSSƏ */
+    .section_right_3 {
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .section_right_3 p {
+        font-size: 16px;
+        margin-top: 4%;
+    }
+
+    .btn_r {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+        margin: 20px auto;
+        display: block;
+    }
+
+    .back button {
+        width: 90px;
+        height: 36px;
+        margin-top: 20px;
+        font-size: 16px;
+        display: block;
+        margin-right: 30rem;
+    }
+
+    .back button a {
+        font-size: 16px;
+    }
+}
+
+
+
+
+@media (max-width: 600px) {
+    section {
+        flex-direction: column;
+    }
+
     .section_left h1 {
-        font-size: 2.2rem;
-        margin-left: 5%;
-        margin-top: 8%;
+        font-size: 1.4rem;
     }
+
     .section_left p {
-        font-size: 1.2rem;
-        margin-left: 5%;
-        margin-top: 3%;
+        font-size: 1rem;
+        margin-top: 20px;
     }
+
     .btn_1, .btn, .btn_send, .btn_r {
         width: 80%;
-        margin-left: 10%;
+        font-size: 1rem;
+        margin: 20px auto;
+    }
+
+    .section__right_2 input {
+        width: 90%;
+        margin: 15px auto;
+    }
+
+    .btn_r {
+        width: 70%;
+        padding: 10px;
+        margin: 20px auto;
+    }
+    .back button {
+        width: 90px;
+        height: 36px;
+        margin-top: 20px;
+        font-size: 16px;
+        display: block;
+        margin-right: 30rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: auto;
+    }
+
+    .section_left,
+    .section_right {
+        width: 100%;
+        min-height: auto;
+    }
+
+    /* Sol hissə */
+    .section_left {display: flex;
+        justify-content: flex-start;
+        padding: 40px 20px;
+        text-align: center;
+       margin-top: 0;
+    }
+
+    .section_left h1 {
+        font-size: 2rem;
+        margin: 20px 0 10px 0;
+        margin-left: 0;
+    }
+
+    .section_left p {
+        font-size: 1rem;
+        margin: 15px 0 25px 0;
+        margin-left: 0;
+    }
+
+    .btn_1,
+    .btn,
+    .btn_send {
+        width: 80%;
+        height: 40px;
+        font-size: 1rem;
+        margin: 10px auto;
+        display: block;
+    }
+
+    .sign {
         font-size: 1rem;
     }
+
+    /* Sağ hissə */
+    .section_right {
+        padding: 30px 20px;
+        text-align: center;
+    }
+
+    .top {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+
+    .section__right_2 {
+        margin: 0;
+    }
+
+    .section__right_2 p {
+        font-size: 1rem;
+        margin: 10px 0;
+    }
+
     .section__right_2 input {
-        width: 100%;
-        margin-left: 0;
+        width: 90%;
+        padding: 10px;
+        font-size: 0.9rem;
+        margin: 10px auto;
+        border-radius: 10px;
+    }
+
+    .btn_r {
+        width: 80%;
+        height: 40px;
+        font-size: 1rem;
+        margin: 15px auto;
+        display: block;
+    }
+
+    .section_right_3 p {
+        margin-top: 15px;
+        font-size: 0.9rem;
+    }
+
+    .sign_in_link {
+        font-size: 0.9rem;
+    }
+
+    .back button {
+        width: 90px;
+        height: 36px;
+        font-size: 0.9rem;
+        margin: 20px auto;
+        display: block;
+        margin-right: 20rem;
+    }
+
+    .back button a {
         font-size: 0.9rem;
     }
 }
