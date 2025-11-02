@@ -516,17 +516,40 @@ footer {
 
 /* 📲 2. Planşetlər üçün (max-width: 768px) */
 @media (max-width: 768px) {
+body {
+        overflow-x: hidden;
+    }
 
-  header {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        /* sol küncə hizala */
+        padding-left: 20px;
+        /* bir az boşluq */
+        height: auto;
 
-  .logo {
-    width: 40%;
-    margin: 10px;
-  }
+    }
 
+    .logo {
+       width: 100%;
+    display: flex;
+    flex-direction: row; /* word bubble-ın üstünə düşsün */
+    align-items: flex-start; /* hamısı sola */
+    position: relative;
+    margin-top: 10px;
+    }
+
+    .word {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .check {
+         position: absolute;
+        bottom: 2.5rem;
+        left: 9.5rem;
+    }
   .nav {
     width: 100%;
   }

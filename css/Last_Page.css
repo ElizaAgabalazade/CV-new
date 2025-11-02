@@ -597,7 +597,8 @@ section {
   .bubble3,
   .bubble4,
   .bubble5,
-  .bubble6 {
+  .bubble6,
+  .bubble7 {
     display: none; /* kiçik ekranlarda arxa bəzəkləri gizlət */
   }
 }
@@ -662,25 +663,49 @@ section {
   .bubble3,
   .bubble4,
   .bubble5,
-  .bubble6 {
+  .bubble6,
+  .bubble7
+   {
     display: none; /* planşetdə də dekorativ elementləri gizlətmək məsləhətdir */
   }
 }
 /* 📱 Telefonlar üçün (max-width: 480px) */
 @media (max-width: 480px) {
 
-  header {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
+  body {
+        overflow-x: hidden;
+    }
 
-  .logo {
-    width: 60%;
-    margin: 10px auto;
-    text-align: center;
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        /* sol küncə hizala */
+        padding-left: 20px;
+        /* bir az boşluq */
+        height: auto;
+
+    }
+
+    .logo {
+       width: 100%;
+    display: flex;
+    flex-direction: row; /* word bubble-ın üstünə düşsün */
+    align-items: flex-start; /* hamısı sola */
     position: relative;
-  }
+    margin-top: 10px;
+    }
+
+    .word {
+        position: absolute;
+        bottom: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .check {
+         position: absolute;
+        bottom: 2.5rem;
+        left: 9.5rem;
+    }
 
   .word {
     position: static;
@@ -763,4 +788,13 @@ section {
     display: none; /* istəsən gizlədə bilərik */
   }
 
+}
+@media (max-width: 600px){
+.bubble3,
+  .bubble4,
+  .bubble5,
+  .bubble6,
+  .bubble7 {
+    display: none; /* istəsən gizlədə bilərik */
+  }
 }

@@ -376,6 +376,7 @@ details[open] .custom-arrow {
   .nav {
     width: 100%;
     margin-top: 10px;
+     
   }
 
   .nav ul {
@@ -388,7 +389,8 @@ details[open] .custom-arrow {
   .nav ul li a {
     width: auto;
     font-size: 18px;
-    padding: 10px 0;
+    padding: 0;
+    
   }
 
   .sign_log {
@@ -666,7 +668,7 @@ details[open] .custom-arrow {
   .nav ul li a {
     width: auto;
     font-size: 18px;
-    padding: 10px 0;
+    padding:  0;
   }
 
   .sign_log {
@@ -755,6 +757,10 @@ details[open] .custom-arrow {
   }
 }
 @media (min-width: 769px) and (max-width: 1024px) {
+  .sign_log {
+    margin: 0 auto;
+  }
+  
   section {
     gap: 25px;
     padding: 25px;
